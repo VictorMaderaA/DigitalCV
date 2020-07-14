@@ -1,0 +1,23 @@
+version: "3.7"
+services:
+  victormaderaapp:
+    build:
+      args:
+        user: victor
+        uid: 1000
+      context: ./
+      dockerfile: Dockerfile
+    image: victormaderaa/victormadera
+    container_name: victormadera-app
+    restart: unless-stopped
+    working_dir: /var/www
+    volumes:
+      - volvictormadera:/var/www/
+
+networks:
+  default:
+    external:
+      name: server_network
+
+volumes:
+  volvictormadera:
