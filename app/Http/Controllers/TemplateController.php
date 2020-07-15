@@ -6,8 +6,10 @@ use App\Http\Requests\CreateTemplateRequest;
 use App\Http\Requests\UpdateTemplateRequest;
 use App\Repositories\TemplateRepository;
 use App\Http\Controllers\AppBaseController;
+use App\Repositories\TemplateViewHistoryRepository;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
-use Flash;
+use Laracasts\Flash\Flash;
 use Response;
 
 class TemplateController extends AppBaseController
@@ -15,9 +17,13 @@ class TemplateController extends AppBaseController
     /** @var  TemplateRepository */
     private $templateRepository;
 
-    public function __construct(TemplateRepository $templateRepo)
+    /** @var  TemplateViewHistoryRepository */
+    private $templateViewHistoryRepository;
+
+    public function __construct(TemplateRepository $templateRepo, TemplateViewHistoryRepository $templateViewHistoryRepo)
     {
         $this->templateRepository = $templateRepo;
+        $this->templateViewHistoryRepository = $templateViewHistoryRepo;
     }
 
     /**
@@ -29,7 +35,7 @@ class TemplateController extends AppBaseController
      */
     public function index(Request $request)
     {
-        $templates = $this->templateRepository->all();
+        $templates = $this->templateRepository->paginate(30);
 
         return view('templates.index')
             ->with('templates', $templates);
@@ -55,8 +61,6 @@ class TemplateController extends AppBaseController
     public function store(CreateTemplateRequest $request)
     {
         $input = $request->all();
-
-        dd($input);
 
         $template = $this->templateRepository->create($input);
 
@@ -154,5 +158,27 @@ class TemplateController extends AppBaseController
         Flash::success('Template deleted successfully.');
 
         return redirect(route('templates.index'));
+    }
+
+    /**
+     * Show the form for editing the specified Template.
+     *
+     * @param int $id
+     *
+     * @return Response
+     */
+    public function preview($id){
+        $template = $this->templateRepository->find($id);
+
+        if (empty($template) || view()->exists('cv-templates.'.$template->getAttributeValue('folderName')) == false) {
+            Flash::error('Template not found');
+            return redirect(route('templates.index'));
+        }
+
+        /** @var  Model */
+        $viewHistoy = $this->templateViewHistoryRepository->makeModel()->setAttribute('template_id', $id);
+        $viewHistoy->save();
+
+        return view('cv-templates.'.$template->getAttributeValue('folderName'));
     }
 }

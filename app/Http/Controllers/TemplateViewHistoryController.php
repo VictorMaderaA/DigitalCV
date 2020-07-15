@@ -7,7 +7,7 @@ use App\Http\Requests\UpdateTemplateViewHistoryRequest;
 use App\Repositories\TemplateViewHistoryRepository;
 use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
-use Flash;
+use Laracasts\Flash\Flash;
 use Response;
 
 class TemplateViewHistoryController extends AppBaseController
@@ -29,7 +29,7 @@ class TemplateViewHistoryController extends AppBaseController
      */
     public function index(Request $request)
     {
-        $templateViewHistories = $this->templateViewHistoryRepository->all();
+        $templateViewHistories = $this->templateViewHistoryRepository->paginate(30);
 
         return view('template_view_histories.index')
             ->with('templateViewHistories', $templateViewHistories);

@@ -7,7 +7,7 @@ use App\Http\Requests\UpdateResumeRequest;
 use App\Repositories\ResumeRepository;
 use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
-use Flash;
+use Laracasts\Flash\Flash;
 use Response;
 
 class ResumeController extends AppBaseController
@@ -29,7 +29,7 @@ class ResumeController extends AppBaseController
      */
     public function index(Request $request)
     {
-        $resumes = $this->resumeRepository->all();
+        $resumes = $this->resumeRepository->paginate(30);
 
         return view('resumes.index')
             ->with('resumes', $resumes);

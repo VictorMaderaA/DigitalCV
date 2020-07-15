@@ -11,6 +11,7 @@ Route::get('/home', 'Views\HomeController@index')->middleware('verified');
 
 
 Route::resource('templates', 'TemplateController');
+Route::get('templates/{templateId}/preview', 'TemplateController@preview')->name('templates.preview');
 
 Route::resource('templateViewHistories', 'TemplateViewHistoryController');
 

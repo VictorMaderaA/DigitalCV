@@ -15,11 +15,13 @@
         <div class="clearfix"></div>
         <div class="box box-primary">
             <div class="box-body">
-                    @include('users.table')
+                {{ $users->links() }}
+                @include('users.table')
+                {{ $users->links() }}
             </div>
         </div>
         <div class="text-center">
-        
+
         </div>
     </div>
 @endsection

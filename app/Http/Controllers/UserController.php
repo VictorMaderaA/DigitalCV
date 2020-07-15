@@ -7,9 +7,9 @@ use App\Http\Requests\UpdateUserRequest;
 use App\Repositories\UserRepository;
 use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
-use Flash;
+use Illuminate\Support\Facades\Hash;
+use Laracasts\Flash\Flash;
 use Response;
-use Hash;
 
 class UserController extends AppBaseController
 {
@@ -30,7 +30,7 @@ class UserController extends AppBaseController
      */
     public function index(Request $request)
     {
-        $users = $this->userRepository->all();
+        $users = $this->userRepository->paginate(30);
 
         return view('users.index')->with('users', $users);
     }

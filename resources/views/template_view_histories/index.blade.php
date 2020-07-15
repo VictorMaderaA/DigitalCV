@@ -15,11 +15,13 @@
         <div class="clearfix"></div>
         <div class="box box-primary">
             <div class="box-body">
-                    @include('template_view_histories.table')
+                {{ $templateViewHistories->links() }}
+                @include('template_view_histories.table')
+                {{ $templateViewHistories->links() }}
             </div>
         </div>
         <div class="text-center">
-        
+
         </div>
     </div>
 @endsection
