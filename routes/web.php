@@ -13,3 +13,10 @@ Route::get('/home', 'Views\HomeController@index')->middleware('verified');
 Route::resource('templates', 'TemplateController');
 
 Route::resource('templateViewHistories', 'TemplateViewHistoryController');
+
+Route::resource('templateViewHistories', 'TemplateViewHistoryController');
+
+Route::resource('users', 'UserController')->middleware('auth');
+
+
+Route::resource('resumes', 'ResumeController');

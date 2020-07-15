@@ -56,6 +56,8 @@ class TemplateController extends AppBaseController
     {
         $input = $request->all();
 
+        dd($input);
+
         $template = $this->templateRepository->create($input);
 
         Flash::success('Template saved successfully.');

@@ -12,10 +12,46 @@
         "inView": false
     },
     {
+        "name": "user_id",
+        "dbType": "unssignedInteger",
+        "htmlType": "selectTable:users:email,id",
+        "validations": "required|email",
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true
+    },
+    {
         "name": "template_id",
-        "dbType": "unsignedInteger",
+        "dbType": "unssignedInteger",
         "htmlType": "selectTable:templates:name,id",
-        "validations": "required",
+        "validations": "required|number",
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true
+    },
+    {
+        "name": "content",
+        "dbType": "longText",
+        "htmlType": "textArea",
+        "validations": "required|string",
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true
+    },
+    {
+        "name": "main",
+        "dbType": "boolean",
+        "htmlType": "checkbox",
+        "validations": "",
         "searchable": true,
         "fillable": true,
         "primary": false,
@@ -46,6 +82,10 @@
         "inForm": false,
         "inIndex": false,
         "inView": true
+    },
+    {
+        "type": "relation",
+        "relation": "User,"
     },
     {
         "type": "relation",
