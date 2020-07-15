@@ -11,23 +11,23 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="{{ asset('templates/mamba/img/favicon.png') }}" rel="icon">
-  <link href="{{ asset('templates/mamba/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+  <link href="{{ asset('vendor/mamba/img/favicon.png') }}" rel="icon">
+  <link href="{{ asset('vendor/mamba/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i,900" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="{{ asset('templates/mamba/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
-  <link href="{{ asset('templates/mamba/vendor/icofont/icofont.min.css') }}" rel="stylesheet">
-  <link href="{{ asset('templates/mamba/vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
-  <link href="{{ asset('templates/mamba/vendor/animate.css/animate.min.css') }}" rel="stylesheet">
-  <link href="{{ asset('templates/mamba/vendor/venobox/venobox.css') }}" rel="stylesheet">
-  <link href="{{ asset('templates/mamba/vendor/owl.carousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
-  <link href="{{ asset('templates/mamba/vendor/aos/aos.css') }}" rel="stylesheet">
+  <link href="{{ asset('vendor/mamba/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('vendor/mamba/vendor/icofont/icofont.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('vendor/mamba/vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('vendor/mamba/vendor/animate.css/animate.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('vendor/mamba/vendor/venobox/venobox.css') }}" rel="stylesheet">
+  <link href="{{ asset('vendor/mamba/vendor/owl.carousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('vendor/mamba/vendor/aos/aos.css') }}" rel="stylesheet">
   {{-- {{ asset('PASTEHERE') }} --}}
   <!-- Template Main CSS File -->
-  <link href="{{ asset('templates/mamba/css/style.css') }}" rel="stylesheet">
+  <link href="{{ asset('vendor/mamba/css/style.css') }}" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: Mamba - v2.3.0
@@ -63,7 +63,7 @@
       <div class="logo float-left">
         <h1 class="text-light"><a href="index.html"><span>{{ env('APP_NAME') }}</span></a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="index.html"><img src="{{ asset('templates/mamba/img/logo.png') }}" alt="" class="img-fluid"></a>-->
+        <!-- <a href="index.html"><img src="{{ asset('vendor/mamba/img/logo.png') }}" alt="" class="img-fluid"></a>-->
       </div>
 
       <nav class="nav-menu float-right d-none d-lg-block">
@@ -142,7 +142,7 @@
         <div class="carousel-inner" role="listbox">
 
           <!-- Slide 1 -->
-          <div class="carousel-item active" style="background-image: url('{{ asset('templates/mamba/img/slide/slide-1.jpg') }}');">
+          <div class="carousel-item active" style="background-image: url('{{ asset('vendor/mamba/img/slide/slide-1.jpg') }}');">
             <div class="carousel-container">
               <div class="carousel-content container">
                 <h2 class="animate__animated animate__fadeInDown">Creamos tu Curriculum online</h2>
@@ -153,7 +153,7 @@
           </div>
 
           <!-- Slide 2 -->
-          <div class="carousel-item" style="background-image: url('{{ asset('templates/mamba/img/slide/slide-2.jpg') }}');">
+          <div class="carousel-item" style="background-image: url('{{ asset('vendor/mamba/img/slide/slide-2.jpg') }}');">
             <div class="carousel-container">
               <div class="carousel-content container">
                 <h2 class="animate__animated animate__fadeInDown">Una pagina web para tu empresa</h2>
@@ -166,7 +166,7 @@
           </div>
 
           {{-- <!-- Slide 3 -->
-          <div class="carousel-item" style="background-image: url('{{ asset('templates/mamba/img/slide/slide-3.jpg') }}');">
+          <div class="carousel-item" style="background-image: url('{{ asset('vendor/mamba/img/slide/slide-3.jpg') }}');">
             <div class="carousel-container">
               <div class="carousel-content container">
                 <h2 class="animate__animated animate__fadeInDown">Sequi ea ut et est quaerat</h2>
@@ -199,7 +199,7 @@
 
         <div class="row no-gutters">
           <div class="col-lg-6 video-box">
-            <img src="{{ asset('templates/mamba/img/about.jpg') }}" class="img-fluid" alt="">
+            <img src="{{ asset('vendor/mamba/img/about.jpg') }}" class="img-fluid" alt="">
             <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
           </div>
 
@@ -386,12 +386,12 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <div class="portfolio-wrap">
-              <img src="{{ asset('templates/mamba/img/portfolio/portfolio-1.jpg') }}" class="img-fluid" alt="">
+              <img src="{{ asset('vendor/mamba/img/portfolio/portfolio-1.jpg') }}" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>App 1</h4>
                 <p>App</p>
                 <div class="portfolio-links">
-                  <a href="{{ asset('templates/mamba/img/portfolio/portfolio-1.jpg') }}" data-gall="portfolioGallery" class="venobox" title="App 1"><i class="icofont-eye"></i></a>
+                  <a href="{{ asset('vendor/mamba/img/portfolio/portfolio-1.jpg') }}" data-gall="portfolioGallery" class="venobox" title="App 1"><i class="icofont-eye"></i></a>
                   <a href="portfolio-details.html" title="More Details"><i class="icofont-external-link"></i></a>
                 </div>
               </div>
@@ -400,12 +400,12 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
             <div class="portfolio-wrap">
-              <img src="{{ asset('templates/mamba/img/portfolio/portfolio-2.jpg') }}" class="img-fluid" alt="">
+              <img src="{{ asset('vendor/mamba/img/portfolio/portfolio-2.jpg') }}" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>Web 3</h4>
                 <p>Web</p>
                 <div class="portfolio-links">
-                  <a href="{{ asset('templates/mamba/img/portfolio/portfolio-2.jpg') }}" data-gall="portfolioGallery" class="venobox" title="Web 3"><i class="icofont-eye"></i></a>
+                  <a href="{{ asset('vendor/mamba/img/portfolio/portfolio-2.jpg') }}" data-gall="portfolioGallery" class="venobox" title="Web 3"><i class="icofont-eye"></i></a>
                   <a href="portfolio-details.html" title="More Details"><i class="icofont-external-link"></i></a>
                 </div>
               </div>
@@ -414,12 +414,12 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <div class="portfolio-wrap">
-              <img src="{{ asset('templates/mamba/img/portfolio/portfolio-3.jpg') }}" class="img-fluid" alt="">
+              <img src="{{ asset('vendor/mamba/img/portfolio/portfolio-3.jpg') }}" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>App 2</h4>
                 <p>App</p>
                 <div class="portfolio-links">
-                  <a href="{{ asset('templates/mamba/img/portfolio/portfolio-3.jpg') }}" data-gall="portfolioGallery" class="venobox" title="App 2"><i class="icofont-eye"></i></a>
+                  <a href="{{ asset('vendor/mamba/img/portfolio/portfolio-3.jpg') }}" data-gall="portfolioGallery" class="venobox" title="App 2"><i class="icofont-eye"></i></a>
                   <a href="portfolio-details.html" title="More Details"><i class="icofont-external-link"></i></a>
                 </div>
               </div>
@@ -428,12 +428,12 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
             <div class="portfolio-wrap">
-              <img src="{{ asset('templates/mamba/img/portfolio/portfolio-4.jpg') }}" class="img-fluid" alt="">
+              <img src="{{ asset('vendor/mamba/img/portfolio/portfolio-4.jpg') }}" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>Card 2</h4>
                 <p>Card</p>
                 <div class="portfolio-links">
-                  <a href="{{ asset('templates/mamba/img/portfolio/portfolio-4.jpg') }}" data-gall="portfolioGallery" class="venobox" title="Card 2"><i class="icofont-eye"></i></a>
+                  <a href="{{ asset('vendor/mamba/img/portfolio/portfolio-4.jpg') }}" data-gall="portfolioGallery" class="venobox" title="Card 2"><i class="icofont-eye"></i></a>
                   <a href="portfolio-details.html" title="More Details"><i class="icofont-external-link"></i></a>
                 </div>
               </div>
@@ -442,12 +442,12 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
             <div class="portfolio-wrap">
-              <img src="{{ asset('templates/mamba/img/portfolio/portfolio-5.jpg') }}" class="img-fluid" alt="">
+              <img src="{{ asset('vendor/mamba/img/portfolio/portfolio-5.jpg') }}" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>Web 2</h4>
                 <p>Web</p>
                 <div class="portfolio-links">
-                  <a href="{{ asset('templates/mamba/img/portfolio/portfolio-5.jpg') }}" data-gall="portfolioGallery" class="venobox" title="Web 2"><i class="icofont-eye"></i></a>
+                  <a href="{{ asset('vendor/mamba/img/portfolio/portfolio-5.jpg') }}" data-gall="portfolioGallery" class="venobox" title="Web 2"><i class="icofont-eye"></i></a>
                   <a href="portfolio-details.html" title="More Details"><i class="icofont-external-link"></i></a>
                 </div>
               </div>
@@ -456,12 +456,12 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <div class="portfolio-wrap">
-              <img src="{{ asset('templates/mamba/img/portfolio/portfolio-6.jpg') }}" class="img-fluid" alt="">
+              <img src="{{ asset('vendor/mamba/img/portfolio/portfolio-6.jpg') }}" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>App 3</h4>
                 <p>App</p>
                 <div class="portfolio-links">
-                  <a href="{{ asset('templates/mamba/img/portfolio/portfolio-6.jpg') }}" data-gall="portfolioGallery" class="venobox" title="App 3"><i class="icofont-eye"></i></a>
+                  <a href="{{ asset('vendor/mamba/img/portfolio/portfolio-6.jpg') }}" data-gall="portfolioGallery" class="venobox" title="App 3"><i class="icofont-eye"></i></a>
                   <a href="portfolio-details.html" title="More Details"><i class="icofont-external-link"></i></a>
                 </div>
               </div>
@@ -470,12 +470,12 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
             <div class="portfolio-wrap">
-              <img src="{{ asset('templates/mamba/img/portfolio/portfolio-7.jpg') }}" class="img-fluid" alt="">
+              <img src="{{ asset('vendor/mamba/img/portfolio/portfolio-7.jpg') }}" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>Card 1</h4>
                 <p>Card</p>
                 <div class="portfolio-links">
-                  <a href="{{ asset('templates/mamba/img/portfolio/portfolio-7.jpg') }}" data-gall="portfolioGallery" class="venobox" title="Card 1"><i class="icofont-eye"></i></a>
+                  <a href="{{ asset('vendor/mamba/img/portfolio/portfolio-7.jpg') }}" data-gall="portfolioGallery" class="venobox" title="Card 1"><i class="icofont-eye"></i></a>
                   <a href="portfolio-details.html" title="More Details"><i class="icofont-external-link"></i></a>
                 </div>
               </div>
@@ -484,12 +484,12 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
             <div class="portfolio-wrap">
-              <img src="{{ asset('templates/mamba/img/portfolio/portfolio-8.jpg') }}" class="img-fluid" alt="">
+              <img src="{{ asset('vendor/mamba/img/portfolio/portfolio-8.jpg') }}" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>Card 3</h4>
                 <p>Card</p>
                 <div class="portfolio-links">
-                  <a href="{{ asset('templates/mamba/img/portfolio/portfolio-8.jpg') }}" data-gall="portfolioGallery" class="venobox" title="Card 3"><i class="icofont-eye"></i></a>
+                  <a href="{{ asset('vendor/mamba/img/portfolio/portfolio-8.jpg') }}" data-gall="portfolioGallery" class="venobox" title="Card 3"><i class="icofont-eye"></i></a>
                   <a href="portfolio-details.html" title="More Details"><i class="icofont-external-link"></i></a>
                 </div>
               </div>
@@ -498,12 +498,12 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
             <div class="portfolio-wrap">
-              <img src="{{ asset('templates/mamba/img/portfolio/portfolio-9.jpg') }}" class="img-fluid" alt="">
+              <img src="{{ asset('vendor/mamba/img/portfolio/portfolio-9.jpg') }}" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>Web 3</h4>
                 <p>Web</p>
                 <div class="portfolio-links">
-                  <a href="{{ asset('templates/mamba/img/portfolio/portfolio-9.jpg') }}" data-gall="portfolioGallery" class="venobox" title="Web 3"><i class="icofont-eye"></i></a>
+                  <a href="{{ asset('vendor/mamba/img/portfolio/portfolio-9.jpg') }}" data-gall="portfolioGallery" class="venobox" title="Web 3"><i class="icofont-eye"></i></a>
                   <a href="portfolio-details.html" title="More Details"><i class="icofont-external-link"></i></a>
                 </div>
               </div>
@@ -600,7 +600,7 @@
 
           <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up">
             <div class="member">
-              <div class="pic"><img src="{{ asset('templates/mamba/img/team/team-1.jpg') }}" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="{{ asset('vendor/mamba/img/team/team-1.jpg') }}" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Walter White</h4>
                 <span>Chief Executive Officer</span>
@@ -616,7 +616,7 @@
 
           <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
             <div class="member">
-              <div class="pic"><img src="{{ asset('templates/mamba/img/team/team-2.jpg') }}" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="{{ asset('vendor/mamba/img/team/team-2.jpg') }}" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Sarah Jhonson</h4>
                 <span>Product Manager</span>
@@ -632,7 +632,7 @@
 
           <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
             <div class="member">
-              <div class="pic"><img src="{{ asset('templates/mamba/img/team/team-3.jpg') }}" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="{{ asset('vendor/mamba/img/team/team-3.jpg') }}" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>William Anderson</h4>
                 <span>CTO</span>
@@ -648,7 +648,7 @@
 
           <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
             <div class="member">
-              <div class="pic"><img src="{{ asset('templates/mamba/img/team/team-4.jpg') }}" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="{{ asset('vendor/mamba/img/team/team-4.jpg') }}" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Amanda Jepson</h4>
                 <span>Accountant</span>
@@ -872,20 +872,20 @@
   <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="{{ asset('templates/mamba/vendor/jquery/jquery.min.js') }}"></script>
-  <script src="{{ asset('templates/mamba/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-  <script src="{{ asset('templates/mamba/vendor/jquery.easing/jquery.easing.min.js') }}"></script>
-  <script src="{{ asset('templates/mamba/vendor/php-email-form/validate.js') }}"></script>
-  <script src="{{ asset('templates/mamba/vendor/jquery-sticky/jquery.sticky.js') }}"></script>
-  <script src="{{ asset('templates/mamba/vendor/venobox/venobox.min.js') }}"></script>
-  <script src="{{ asset('templates/mamba/vendor/waypoints/jquery.waypoints.min.js') }}"></script>
-  <script src="{{ asset('templates/mamba/vendor/counterup/counterup.min.js') }}"></script>
-  <script src="{{ asset('templates/mamba/vendor/owl.carousel/owl.carousel.min.js') }}"></script>
-  <script src="{{ asset('templates/mamba/vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
-  <script src="{{ asset('templates/mamba/vendor/aos/aos.js') }}"></script>
+  <script src="{{ asset('vendor/mamba/vendor/jquery/jquery.min.js') }}"></script>
+  <script src="{{ asset('vendor/mamba/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ asset('vendor/mamba/vendor/jquery.easing/jquery.easing.min.js') }}"></script>
+  <script src="{{ asset('vendor/mamba/vendor/php-email-form/validate.js') }}"></script>
+  <script src="{{ asset('vendor/mamba/vendor/jquery-sticky/jquery.sticky.js') }}"></script>
+  <script src="{{ asset('vendor/mamba/vendor/venobox/venobox.min.js') }}"></script>
+  <script src="{{ asset('vendor/mamba/vendor/waypoints/jquery.waypoints.min.js') }}"></script>
+  <script src="{{ asset('vendor/mamba/vendor/counterup/counterup.min.js') }}"></script>
+  <script src="{{ asset('vendor/mamba/vendor/owl.carousel/owl.carousel.min.js') }}"></script>
+  <script src="{{ asset('vendor/mamba/vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
+  <script src="{{ asset('vendor/mamba/vendor/aos/aos.js') }}"></script>
 
   <!-- Template Main JS File -->
-  <script src="{{ asset('templates/mamba/js/main.js') }}"></script>
+  <script src="{{ asset('vendor/mamba/js/main.js') }}"></script>
 </body>
 
 </html>
