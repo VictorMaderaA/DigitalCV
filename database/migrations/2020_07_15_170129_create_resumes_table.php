@@ -19,7 +19,7 @@ class CreateResumesTable extends Migration
             $table->foreignId('user_id')->references('id')->on('users');
             $table->unsignedInteger('template_id');
             $table->foreign('template_id')->references('id')->on('templates');
-            $table->longText('content');
+            $table->longText('content')->nullable();
             $table->boolean('main');
             $table->timestamps();
             $table->softDeletes();

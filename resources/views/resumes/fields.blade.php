@@ -10,6 +10,12 @@
     {!! Form::select('template_id', $templateItems, null, ['class' => 'form-control']) !!}
 </div>
 
+<!-- Template Id Field -->
+<div class="form-group col-sm-6">
+    {!! Form::label('content', 'Content:') !!}
+    {!! Form::textarea('content', null, ['class' => 'form-control']) !!}
+</div>
+
 <!-- Main Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('main', 'Main:') !!}

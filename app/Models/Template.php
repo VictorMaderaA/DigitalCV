@@ -55,5 +55,4 @@ class Template extends Model
         'folderName' => 'required'
     ];
 
-
 }

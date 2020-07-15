@@ -21,3 +21,5 @@ Route::resource('users', 'UserController')->middleware('auth');
 
 
 Route::resource('resumes', 'ResumeController');
+Route::get('resumes/{resumeId}/preview', 'ResumeController@preview')->name('resumes.preview');
+

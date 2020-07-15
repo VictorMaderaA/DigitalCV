@@ -6,6 +6,8 @@ use App\Http\Requests\CreateResumeRequest;
 use App\Http\Requests\UpdateResumeRequest;
 use App\Repositories\ResumeRepository;
 use App\Http\Controllers\AppBaseController;
+use App\Models\Resume;
+use App\Repositories\TemplateRepository;
 use Illuminate\Http\Request;
 use Laracasts\Flash\Flash;
 use Response;
@@ -15,7 +17,10 @@ class ResumeController extends AppBaseController
     /** @var  ResumeRepository */
     private $resumeRepository;
 
-    public function __construct(ResumeRepository $resumeRepo)
+    /** @var  TemplateRepository */
+    private $templateRepository;
+
+    public function __construct(ResumeRepository $resumeRepo, TemplateRepository $templateRepo)
     {
         $this->resumeRepository = $resumeRepo;
     }
@@ -152,5 +157,33 @@ class ResumeController extends AppBaseController
         Flash::success('Resume deleted successfully.');
 
         return redirect(route('resumes.index'));
+    }
+
+        /**
+     * Show the form for editing the specified Template.
+     *
+     * @param int $id
+     *
+     * @return Response
+     */
+    public function preview($id){
+        /** @var Resume */
+        $resume = $this->resumeRepository->find($id);
+
+        if (empty($resume)) {
+            Flash::error('Resume not found');
+
+            return redirect(route('resumes.index'));
+        }
+
+        $template = $resume->template()->first();
+
+        if (view()->exists('cv-templates.'.$template->getAttributeValue('folderName')) == false) {
+            Flash::error('Template not found');
+            return redirect(route('templates.index'));
+        }
+
+        return view('cv-templates.'.$template->getAttributeValue('folderName'))
+               ->with('content', $resume->getAttributeValue('content'));
     }
 }

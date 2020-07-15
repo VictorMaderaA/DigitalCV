@@ -14,12 +14,13 @@
             <tr>
                 <td>{{ $resume->user_id }}</td>
             <td>{{ $resume->template_id }}</td>
-            <td>{{ $resume->content }}</td>
+            <td>{{ $resume->content? substr($resume->content, 0, 30) : 'NULL' }}</td>
             <td>{{ $resume->main }}</td>
                 <td>
                     {!! Form::open(['route' => ['resumes.destroy', $resume->id], 'method' => 'delete']) !!}
                     <div class='btn-group'>
                         <a href="{{ route('resumes.show', [$resume->id]) }}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-eye-open"></i></a>
+                        <a href="{{ route('resumes.preview', [$resume->id]) }}" target="_blank" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-eye-open"></i></a>
                         <a href="{{ route('resumes.edit', [$resume->id]) }}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-edit"></i></a>
                         {!! Form::button('<i class="glyphicon glyphicon-trash"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Are you sure?')"]) !!}
                     </div>

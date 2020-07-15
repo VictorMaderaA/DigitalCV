@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-use Eloquent as Model;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
@@ -22,7 +22,7 @@ class Resume extends Model
     use SoftDeletes;
 
     public $table = 'resumes';
-    
+
 
     protected $dates = ['deleted_at'];
 
@@ -51,10 +51,15 @@ class Resume extends Model
      * @var array
      */
     public static $rules = [
-        'user_id' => 'required|email',
-        'template_id' => 'required|number',
-        'content' => 'required|string'
+        'user_id' => 'required|numeric',
+        'template_id' => 'required|numeric',
+        'content' => 'string|nullable'
     ];
 
-    
+    public function template()
+    {
+        return $this->hasOne(Template::class, 'id', 'template_id');
+    }
+
+
 }
