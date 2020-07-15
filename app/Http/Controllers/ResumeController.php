@@ -3,10 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Base\Controller;
-use App\Template;
+use App\Resume;
 use Illuminate\Http\Request;
 
-class TemplateController extends Controller
+class ResumeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -42,10 +42,10 @@ class TemplateController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Template  $template
+     * @param  \App\Resume  $resume
      * @return \Illuminate\Http\Response
      */
-    public function show(Template $template)
+    public function show(Resume $resume)
     {
         //
     }
@@ -53,10 +53,10 @@ class TemplateController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Template  $template
+     * @param  \App\Resume  $resume
      * @return \Illuminate\Http\Response
      */
-    public function edit(Template $template)
+    public function edit(Resume $resume)
     {
         //
     }
@@ -65,10 +65,10 @@ class TemplateController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Template  $template
+     * @param  \App\Resume  $resume
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Template $template)
+    public function update(Request $request, Resume $resume)
     {
         //
     }
@@ -76,10 +76,10 @@ class TemplateController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Template  $template
+     * @param  \App\Resume  $resume
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Template $template)
+    public function destroy(Resume $resume)
     {
         //
     }

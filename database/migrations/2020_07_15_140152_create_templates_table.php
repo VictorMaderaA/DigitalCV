@@ -15,6 +15,10 @@ class CreateTemplatesTable extends Migration
     {
         Schema::create('templates', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('folderName');
+            $table->string('imageUrl');
+            $table->string('previewImageUrl');
             $table->timestamps();
         });
     }

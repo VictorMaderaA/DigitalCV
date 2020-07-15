@@ -143,7 +143,7 @@
               <div class="carousel-content container">
                 <h2 class="animate__animated animate__fadeInDown">Creamos tu Curriculum online</h2>
                 <p class="animate__animated animate__fadeInUp">Nosotros Creamos un curriculum virtual para que compartas y resaltes en la multitud. </p>
-                <a href="#pricing-cv" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+                <a href="#pricing-cv" class="btn-get-started animate__animated animate__fadeInUp scrollto">Mas Informacion</a>
               </div>
             </div>
           </div>
@@ -153,10 +153,10 @@
             <div class="carousel-container">
               <div class="carousel-content container">
                 <h2 class="animate__animated animate__fadeInDown">Una pagina web para tu empresa</h2>
-                <p class="animate__animated animate__fadeInUp">No necesitas saber nada para crear la pagina web de tu negocio.
+                <p class="animate__animated animate__fadeInUp">No necesitas saber nada para crear la pagina web.
                     Tu elige entre nuestra variedad de plantillas y nosotros nos encargamos del resto.
-                    Si posteriormente necesitas modificar la informacion de tu pagina, nos dices y nosotros te notificamos en cuanto se realize.</p>
-                <a href="#services" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+                    Si posteriormente necesitas modificar la informacion de tu pagina, nos dices y nosotros te notificamos en cuanto se realizen los cambios.</p>
+                <a href="#contact" class="btn-get-started animate__animated animate__fadeInUp scrollto">Contacta con Nosotros</a>
               </div>
             </div>
           </div>
@@ -319,39 +319,39 @@
       <div class="container">
 
         <div class="section-title">
-          <h2>Services</h2>
+          <h2>CV Online</h2>
         </div>
 
         <div class="row">
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
             <div class="icon"><i class="icofont-computer"></i></div>
-            <h4 class="title"><a href="">Lorem Ipsum</a></h4>
-            <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+            <h4 class="title"><a href="">CV Personalizado</a></h4>
+            <p class="description">Crea tu Curriculum con nuestras plantillas disponibles que se adaptan en Ordenadores y Moviles.</p>
           </div>
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
             <div class="icon"><i class="icofont-chart-bar-graph"></i></div>
-            <h4 class="title"><a href="">Dolor Sitema</a></h4>
-            <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
+            <h4 class="title"><a href="">Visualiza</a></h4>
+            <p class="description">Obten informacion sobre cuantas personas visualizaron tu cv.</p>
           </div>
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
             <div class="icon"><i class="icofont-earth"></i></div>
-            <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
-            <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+            <h4 class="title"><a href="">Comparte</a></h4>
+            <p class="description">Terminaste de editar tu cv. Obten link de tu perfil y comparte con el resto del mundo.</p>
           </div>
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
             <div class="icon"><i class="icofont-image"></i></div>
-            <h4 class="title"><a href="">Magni Dolores</a></h4>
-            <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+            <h4 class="title"><a href="">Almacena</a></h4>
+            <p class="description">Si utilizas imagenes o videos en tu cv, guardalos con nosotros obten el link y utilizalos.</p>
           </div>
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
             <div class="icon"><i class="icofont-settings"></i></div>
-            <h4 class="title"><a href="">Nemo Enim</a></h4>
-            <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+            <h4 class="title"><a href="">Nosotros lo Configuramos</a></h4>
+            <p class="description">Si no sabes como editar tu cv nosotros podemos ayudarte.</p>
           </div>
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
             <div class="icon"><i class="icofont-tasks-alt"></i></div>
-            <h4 class="title"><a href="">Eiusmod Tempor</a></h4>
-            <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
+            <h4 class="title"><a href="">Fomularios de contacto</a></h4>
+            <p class="description">Agrega un formulario a tu cv y deja que te contacten. Nosotros almacenamos los mensajes para que los veas cuando quieras.</p>
           </div>
         </div>
 
@@ -546,8 +546,12 @@
                   <h6 class="card-price text-center">€2<span class="period">/mes</span></h6>
                   <hr>
                   <ul class="fa-ul">
-                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Almacena las imagens y videos de tu CV con nosotros</li>
-                    <li><span class="fa-li"><i class="fas fa-check"></i></span>+ Funciones Lite</li>
+                    <li><span class="fa-li"><i class="fas fa-check"></i>Perfil propio</span></li>
+                    <li><span class="fa-li"><i class="fas fa-check"></i>CV apartir de plantilla html</span></li>
+                    <li><span class="fa-li"><i class="fas fa-check"></i>Guarda tu documento CV</span></li>
+                    <li><span class="fa-li"><i class="fas fa-check"></i>Permite que descarguen tu CV</span></li>
+                    <li><span class="fa-li"><i class="fas fa-check"></i>Comparte tu Perfil con otros</span></li>
+                    <li><span class="fa-li"><i class="fas fa-check"></i>Almacena las imagens y videos de tu CV con nosotros</span></li>
                   </ul>
                   <a href="#" class="btn btn-block btn-primary text-uppercase">Obtener</a>
                 </div>
@@ -557,19 +561,19 @@
             <div class="col-lg-4">
               <div class="card">
                 <div class="card-body">
-                  <h5 class="card-title text-muted text-uppercase text-center">Pro</h5>
-                  <h6 class="card-price text-center">€49<span class="period">/mes</span></h6>
+                  <h5 class="card-title text-muted text-uppercase text-center">Basic</h5>
+                  <h6 class="card-price text-center">€3<span class="period">/mes</span></h6>
                   <hr>
                   <ul class="fa-ul">
-                    <li><span class="fa-li"><i class="fas fa-check"></i></span><strong>Unlimited Users</strong></li>
-                    <li><span class="fa-li"><i class="fas fa-check"></i></span>150GB Storage</li>
-                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Unlimited Public Projects</li>
-                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Community Access</li>
-                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Unlimited Private Projects</li>
-                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Dedicated Phone Support</li>
-                    <li><span class="fa-li"><i class="fas fa-check"></i></span><strong>Unlimited</strong> Free Subdomains</li>
-                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Monthly Status Reports</li>
-                  </ul>
+                    <li><span class="fa-li"><i class="fas fa-check"></i>Perfil propio</span></li>
+                    <li><span class="fa-li"><i class="fas fa-check"></i>CV apartir de plantilla html</span></li>
+                    <li><span class="fa-li"><i class="fas fa-check"></i>Guarda tu documento CV</span></li>
+                    <li><span class="fa-li"><i class="fas fa-check"></i>Permite que descarguen tu CV</span></li>
+                    <li><span class="fa-li"><i class="fas fa-check"></i>Comparte tu Perfil con otros</span></li>
+                    <li><span class="fa-li"><i class="fas fa-check"></i>Almacena las imagens y videos de tu CV con nosotros</span></li>
+                    <li><span class="fa-li"><i class="fas fa-check"></i>Formularios de contacto ligados a tu perfil</span></li>
+                    <li><span class="fa-li"><i class="fas fa-check"></i>Almacenamos los mensajes que te lleguen</span></li>
+                </ul>
                   <a href="#" class="btn btn-block btn-primary text-uppercase">Obtener</a>
                 </div>
               </div>
