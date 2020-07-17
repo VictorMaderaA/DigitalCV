@@ -5,10 +5,14 @@ namespace App;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Laravel\Cashier\Billable;
+use Stripe\Customer;
+use Stripe\Stripe;
 
 class User extends Authenticatable
 {
     use Notifiable;
+    use Billable;
 
     /**
      * The attributes that are mass assignable.
@@ -36,4 +40,15 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+
+    public function getStripeCustomer(){
+        Stripe::setApiKey(env('STRIPE_SECRET'));
+        return $this->createOrGetStripeCustomer();
+    }
+
+    public function getSubscriptions(){
+        $this->getStripeCustomer();
+        return Customer::retrieve($this->stripe_id)->subscriptions->data;
+    }
 }

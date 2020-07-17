@@ -587,7 +587,9 @@
       </section>
 
 
-    <!-- ======= Our Team Section ======= -->
+
+      <!-- ======= Our Team Section ======= -->
+
     <section id="team" class="team">
       <div class="container">
 
