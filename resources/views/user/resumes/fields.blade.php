@@ -1,8 +1,3 @@
-<div class="form-group col-sm-6">
-    {!! Form::label('content', 'Content:') !!}
-    {!! Form::textarea('content', null, ['class' => 'form-control']) !!}
-</div>
-
 <!-- Main Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('main', 'Principal:') !!}
@@ -12,6 +7,24 @@
     </label>
 </div>
 
+<div class="clearfix"></div>
+
+<div class="form-group col-sm-6">
+    {!! Form::label('content', 'Content:') !!}
+    {!! Form::textarea('content', null, ['class' => 'form-control', 'placeholder' =>
+'Copy Everything thats inside the following div tags
+Copiar contenido dentro que se encuentra dentro de las etiquetas siguientes
+
+<div id="copy-me-cv">
+    Contenido/Modificaciones
+</div>']) !!}
+</div>
+
+<div class="clearfix"></div>
+
+<a class="btn btn-primary" href="{{route('my.resumes.download', $resume->id)}}" style="margin: 20px" role="button">
+    Descargar Plantilla Editable
+</a>
 
 <!-- Submit Field -->
 <div class="form-group col-sm-12">

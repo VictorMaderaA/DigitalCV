@@ -7,6 +7,7 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Cashier\Billable;
+use Spatie\Permission\Traits\HasRoles;
 use Stripe\Customer;
 use Stripe\Stripe;
 
@@ -14,6 +15,7 @@ class User extends Authenticatable
 {
     use Notifiable;
     use Billable;
+    use HasRoles;
 
     /**
      * The attributes that are mass assignable.
@@ -63,6 +65,7 @@ class User extends Authenticatable
         if(count($subscription = $this->getSubscriptions()) !== 1){
             return null;
         }
+        //TODO- REPLACE STATIC PRODUCTS
         switch ($subscription[0]->plan->product) {
             case 'prod_HfDn78h6rNx2zj': //LITE
                 return 1;

@@ -15,6 +15,9 @@
     <a href="{{ route('payment.index') }}"><i class="fa fa-edit"></i><span>Pago y Subscripcion</span></a>
 </li>
 
+
+@role('Super')
+
 <li class="header">Administracion</li>
 
 <li class="{{ Request::is('templates*') ? 'active' : '' }}">
@@ -25,12 +28,14 @@
     <a href="{{ route('templateViewHistories.index') }}"><i class="fa fa-edit"></i><span>Template View Histories</span></a>
 </li>
 
-
-
 <li class="{{ Request::is('users*') ? 'active' : '' }}">
     <a href="{!! route('users.index') !!}"><i class="fa fa-user"></i><span>Users</span></a>
 </li>
 <li class="{{ Request::is('resumes*') ? 'active' : '' }}">
     <a href="{{ route('resumes.index') }}"><i class="fa fa-edit"></i><span>Resumes</span></a>
 </li>
+
+@endrole
+
+
 

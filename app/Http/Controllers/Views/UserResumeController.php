@@ -7,7 +7,9 @@ use App\Repositories\ResumeRepository;
 use App\Repositories\TemplateRepository;
 use App\Repositories\TemplateViewHistoryRepository;
 use App\User;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use Laracasts\Flash\Flash;
 
 class UserResumeController extends Controller
@@ -152,6 +154,31 @@ class UserResumeController extends Controller
         $this->resumeRepository->delete($resumeId);
         Flash::success('Se elimino correctamente');
         return redirect(route('my.resumes'));
+    }
+
+    public function downloadView($id){
+
+        /** @var Resume */
+        $resume = $this->resumeRepository->find($id);
+
+        if (empty($resume)) {
+            Flash::error('Resume not found');
+
+            return redirect(route('resumes.index'));
+        }
+
+        $template = $resume->template()->first();
+
+        if (view()->exists('cv-templates.'.$template->getAttributeValue('folderName')) == false) {
+            Flash::error('Template not found');
+            return redirect(route('templates.index'));
+        }
+
+        $contents = view('cv-templates.'.$template->getAttributeValue('folderName'))->render();
+        $name = Carbon::now()->dayOfYear();
+        Storage::disk('local')->put("/temp/{$name}.html", $contents);
+        $response = Storage::download("/temp/{$name}.html", 'template.html');
+        return $response;
     }
 
 }
