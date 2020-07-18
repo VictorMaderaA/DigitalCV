@@ -24,3 +24,17 @@ Route::resource('resumes', 'ResumeController');
 Route::get('resumes/{resumeId}/preview', 'ResumeController@preview')->name('resumes.preview');
 
 
+Route::get('my/templates', 'Views\UserResumeController@index')->name('my.resumes');
+Route::get('my/templates/{idTemplate}/copy', 'Views\UserResumeController@copyTemplate')->name('my.resumes.copyTemplate');
+Route::get('my/templates/{idResume}/edit', 'Views\UserResumeController@edit')->name('my.resumes.edit');
+Route::put('my/templates/{idResume}', 'Views\UserResumeController@update')->name('my.resumes.update');
+Route::delete('my/templates/{idResume}', 'Views\UserResumeController@delete')->name('my.resumes.destroy');
+Route::get('my/media', 'Views\PaymentController')->name('my.media');
+Route::get('my/profile', 'Views\PaymentController')->name('my.profile');
+
+Route::get('profile/{userId}', 'Views\WelcomeController');
+Route::get('profile/{userId}/resume', 'Views\WelcomeController');
+Route::get('profile/{userId}/download', 'Views\WelcomeController');
+
+
+

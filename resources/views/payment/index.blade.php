@@ -61,70 +61,71 @@
             @endif
         </div>
     </div>
-
+    @if (count($user->getSubscriptions()) <= 0)
     <div class="row align-content-center align-items-center">
-            <div class="col-md-offset-1 col-md-3">
-                <div class="well">
-                    <h2 class="muted">LITE</h2>
-                    <p><span class="label label-success">POPULAR</span></p>
-                    <ul>
-                        <li><span>Perfil propio</span></li>
-                        <li><span>CV apartir de plantilla html</span></li>
-                        <li><span>Guarda tu documento CV</span></li>
-                        <li><span>Permite que descarguen tu CV</span></li>
-                        <li><span>Comparte tu Perfil con otros</span></li>
+        <div class="col-md-offset-1 col-md-3">
+            <div class="well">
+                <h2 class="muted">LITE</h2>
+                <p><span class="label label-success">POPULAR</span></p>
+                <ul>
+                    <li><span>Perfil propio</span></li>
+                    <li><span>CV apartir de plantilla html</span></li>
+                    <li><span>Guarda tu documento CV</span></li>
+                    <li><span>Permite que descarguen tu CV</span></li>
+                    <li><span>Comparte tu Perfil con otros</span></li>
 
-                    </ul>
-                    <hr>
-                    <h3>€1 / month</h3>
-                    <hr>
-                    <p><a class="btn btn-success btn-large" href="{{ route('payment.subscribe', 'lite') }}"><i
-                                class="icon-ok"></i> Select plan</a></p>
-                </div>
+                </ul>
+                <hr>
+                <h3>€1 / month</h3>
+                <hr>
+                <p><a class="btn btn-success btn-large" href="{{ route('payment.subscribe', 'lite') }}"><i
+                            class="icon-ok"></i> Select plan</a></p>
             </div>
-
-            <div class="col-md-4">
-                <div class="well">
-                    <h2 class="text-warning">LITEPLUS</h2>
-                    <p><span class="label label-success">POPULAR</span></p>
-                    <ul>
-                        <li><span>Perfil propio</span></li>
-                        <li><span>CV apartir de plantilla html</span></li>
-                        <li><span>Guarda tu documento CV</span></li>
-                        <li><span>Permite que descarguen tu CV</span></li>
-                        <li><span>Comparte tu Perfil con otros</span></li>
-                        <li><span>Almacena las imagens y videos de tu CV con nosotros</span></li>
-                    </ul>
-                    <hr>
-                    <h3>€2 / month</h3>
-                    <hr>
-                    <p><a class="btn btn-success btn-large" href="{{ route('payment.subscribe', 'lite-plus') }}"><i
-                                class="icon-ok"></i> Select plan</a></p>
-                </div>
-            </div>
-
-            <div class="col-md-3">
-                <div class="well">
-                    <h2 class="text-info">BASIC</h2>
-                    <ul>
-                        <li><span>Perfil propio</span></li>
-                        <li><span>CV apartir de plantilla html</span></li>
-                        <li><span>Guarda tu documento CV</span></li>
-                        <li><span>Permite que descarguen tu CV</span></li>
-                        <li><span>Comparte tu Perfil con otros</span></li>
-                        <li><span>Almacena las imagens y videos de tu CV con nosotros</span></li>
-                        <li><span>Formularios de contacto ligados a tu perfil</span></li>
-                        <li><span>Almacenamos los mensajes que te lleguen</span></li>
-                    </ul>
-                    <hr>
-                    <h3>€3 / month</h3>
-                    <hr>
-                    <p><a class="btn btn-success btn-large" href="{{ route('payment.subscribe', 'basic') }}"><i
-                                class="icon-ok"></i> Select plan</a></p>
-                </div>
-            </div>
-
         </div>
+
+        <div class="col-md-4">
+            <div class="well">
+                <h2 class="text-warning">LITEPLUS</h2>
+                <p><span class="label label-success">POPULAR</span></p>
+                <ul>
+                    <li><span>Perfil propio</span></li>
+                    <li><span>CV apartir de plantilla html</span></li>
+                    <li><span>Guarda tu documento CV</span></li>
+                    <li><span>Permite que descarguen tu CV</span></li>
+                    <li><span>Comparte tu Perfil con otros</span></li>
+                    <li><span>Almacena las imagens y videos de tu CV con nosotros</span></li>
+                </ul>
+                <hr>
+                <h3>€2 / month</h3>
+                <hr>
+                <p><a class="btn btn-success btn-large" href="{{ route('payment.subscribe', 'lite-plus') }}"><i
+                            class="icon-ok"></i> Select plan</a></p>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="well">
+                <h2 class="text-info">BASIC</h2>
+                <ul>
+                    <li><span>Perfil propio</span></li>
+                    <li><span>CV apartir de plantilla html</span></li>
+                    <li><span>Guarda tu documento CV</span></li>
+                    <li><span>Permite que descarguen tu CV</span></li>
+                    <li><span>Comparte tu Perfil con otros</span></li>
+                    <li><span>Almacena las imagens y videos de tu CV con nosotros</span></li>
+                    <li><span>Formularios de contacto ligados a tu perfil</span></li>
+                    <li><span>Almacenamos los mensajes que te lleguen</span></li>
+                </ul>
+                <hr>
+                <h3>€3 / month</h3>
+                <hr>
+                <p><a class="btn btn-success btn-large" href="{{ route('payment.subscribe', 'basic') }}"><i
+                            class="icon-ok"></i> Select plan</a></p>
+            </div>
+        </div>
+
+    </div>
+    @endif
 
 
 

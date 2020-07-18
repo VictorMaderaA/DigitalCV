@@ -11,9 +11,9 @@
        <div class="box box-primary">
            <div class="box-body">
                <div class="row">
-                   {!! Form::model($resume, ['route' => ['resumes.update', $resume->id], 'method' => 'patch']) !!}
+                   {!! Form::model($resume, ['route' => ['my.resumes.update', $resume->id], 'method' => 'put']) !!}
 
-                        @include('resumes.fields')
+                        @include('user.resumes.fields')
 
                    {!! Form::close() !!}
                </div>

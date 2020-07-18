@@ -47,6 +47,8 @@
         @endif
     </div>
 
+    @include('layouts.template_download')
+
   <div id="preloader"></div>
 
   <!-- Vendor JS Files -->

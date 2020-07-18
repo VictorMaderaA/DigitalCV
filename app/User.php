@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Models\Resume;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -42,6 +43,12 @@ class User extends Authenticatable
     ];
 
 
+    public function resumes()
+    {
+        return $this->hasMany(Resume::class, 'user_id', 'id');
+    }
+
+
     public function getStripeCustomer(){
         Stripe::setApiKey(env('STRIPE_SECRET'));
         return $this->createOrGetStripeCustomer();
@@ -50,5 +57,26 @@ class User extends Authenticatable
     public function getSubscriptions(){
         $this->getStripeCustomer();
         return Customer::retrieve($this->stripe_id)->subscriptions->data;
+    }
+
+    public function getSubscriptionLevel(){
+        if(count($subscription = $this->getSubscriptions()) !== 1){
+            return null;
+        }
+        switch ($subscription[0]->plan->product) {
+            case 'prod_HfDn78h6rNx2zj': //LITE
+                return 1;
+                break;
+            case 'prod_HfDtBZkL4mR99j': //LITEPLUS
+                return 2;
+                break;
+            case 'ADSDA': //BASIC
+                return 3;
+                break;
+
+            default:
+                return null;
+                break;
+        }
     }
 }
