@@ -12,7 +12,7 @@ use Spatie\Permission\Traits\HasRoles;
 use Stripe\Customer;
 use Stripe\Stripe;
 
-class User extends Authenticatable
+class User extends Authenticatable implements MustVerifyEmail
 {
     use Notifiable;
     use Billable;
