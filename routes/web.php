@@ -13,6 +13,7 @@ Route::resource('templates', 'TemplateController')->middleware(['auth', 'verifie
 Route::resource('templateViewHistories', 'TemplateViewHistoryController')->middleware(['auth', 'verified']);
 Route::resource('users', 'UserController')->middleware(['auth', 'verified']);
 Route::resource('resumes', 'ResumeController')->middleware(['auth', 'verified']);
+Route::resource('files', 'FileController');
 
 Route::get('resumes/{resumeId}/preview', 'ResumeController@preview')->name('resumes.preview');
 Route::get('templates/{templateId}/preview', 'TemplateController@preview')->name('templates.preview');
@@ -43,7 +44,5 @@ Route::get('profile/{userId}/resume', 'Views\ProfileController@resume')->name('p
 // Route::get('profile/{userId}/download', 'Views\ProfileController@index')->middleware(['auth', 'verified']);
 
 
-
-
-
-Route::resource('files', 'FileController');
+Route::get('legal/terms', 'Views\LegalController@terms')->name('legal.terms');
+Route::get('legal/privacy', 'Views\LegalController@privacy')->name('legal.privacy');

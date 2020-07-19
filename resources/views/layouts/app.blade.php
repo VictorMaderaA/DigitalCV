@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/css/bootstrap-datetimepicker.min.css">
 
+    @include('layouts.cookie-head')
     @yield('css')
 </head>
 
@@ -159,5 +160,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/js/select2.min.js"></script>
 
     @stack('scripts')
+
+    @include('layouts.cookie-body')
 </body>
 </html>
