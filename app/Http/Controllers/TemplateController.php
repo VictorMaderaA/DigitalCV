@@ -129,7 +129,12 @@ class TemplateController extends AppBaseController
             return redirect(route('templates.index'));
         }
 
+        /** @var Template */
         $template = $this->templateRepository->update($request->all(), $id);
+
+        if($file = $request->file('previewImage')){
+            $template->setPreviewFile($file);
+        }
 
         Flash::success('Template updated successfully.');
 

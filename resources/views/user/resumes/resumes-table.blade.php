@@ -13,7 +13,7 @@
         <tbody>
             @foreach($resumes as $resume)
             @php
-                $data = $resume->template()->first();
+            $data = $resume->template()->first();
             @endphp
             <tr>
                 <td>{{ $resume->main? 'Default':'' }}</td>
@@ -38,3 +38,4 @@
         </tbody>
     </table>
 </div>
+

@@ -24,6 +24,7 @@ class HomeController extends Controller
      */
     public function index()
     {
+        return redirect(route('my.profile'));
         return view('home');
     }
 }

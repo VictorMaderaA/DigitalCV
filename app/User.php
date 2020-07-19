@@ -46,6 +46,10 @@ class User extends Authenticatable
     ];
 
 
+    public function getResumeLink(){
+        return route('profile.resume', $this->id);
+    }
+
     public function resumes()
     {
         return $this->hasMany(Resume::class, 'user_id', 'id');

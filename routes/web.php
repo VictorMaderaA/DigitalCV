@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes(['verify' => true]);
 
-Route::get('/', 'Views\WelcomeController');
+Route::get('/', 'Views\WelcomeController')->name('welcome');
 Route::get('home', 'Views\HomeController@index')->middleware(['auth', 'verified'])->name('home');
 
 
@@ -37,10 +37,10 @@ Route::post('my/files', 'Views\UserFileController@store')->name('my.files.store'
 Route::get('my/profile', 'Views\ProfileController@index')->name('my.profile')->middleware(['auth', 'verified']);
 
 
-Route::get('profile/{userId}', 'Views\ProfileController@index')->middleware(['auth', 'verified']);
+// Route::get('profile/{userId}', 'Views\ProfileController@index')->middleware(['auth', 'verified']);
 Route::get('profile/{userId}/file/{fileId}', 'Views\ProfileController@getFile')->name('profile.file');
-Route::get('profile/{userId}/resume', 'Views\ProfileController@index')->middleware(['auth', 'verified']);
-Route::get('profile/{userId}/download', 'Views\ProfileController@index')->middleware(['auth', 'verified']);
+Route::get('profile/{userId}/resume', 'Views\ProfileController@resume')->name('profile.resume')->middleware(['auth', 'verified']);
+// Route::get('profile/{userId}/download', 'Views\ProfileController@index')->middleware(['auth', 'verified']);
 
 
 

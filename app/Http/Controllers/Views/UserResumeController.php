@@ -39,7 +39,7 @@ class UserResumeController extends Controller
         $user = auth()->user();
         $templates = $this->templateRepository->allQuery([
             'active' => 1
-        ])->paginate(30);
+        ])->paginate(15);
 
         $resumes = $user->resumes()->get();
 

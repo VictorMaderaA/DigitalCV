@@ -3,8 +3,7 @@
         <thead>
             <tr>
                 <th>Name</th>
-                <th>Url para utilizar</th>
-                <th>User Id</th>
+                <th>Url publica (utilizala en las plantillas)</th>
                 <th colspan="3">Action</th>
             </tr>
         </thead>
@@ -13,7 +12,6 @@
             <tr>
                 <td>{{ $file->name }}</td>
                 <td>{{ $file->getPublicLink() }}</td>
-                <td>{{ $file->user_id }}</td>
                 <td>
                     {!! Form::open(['route' => ['files.destroy', $file->id], 'method' => 'delete']) !!}
                     <div class='btn-group'>
