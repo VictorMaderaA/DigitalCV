@@ -1,0 +1,23 @@
+version: "3.7"
+services:
+  digitalcvapp:
+    build:
+      args:
+        user: victor
+        uid: 1000
+      context: ./
+      dockerfile: Dockerfile
+    image: victormaderaa/digitalcv
+    container_name: digitalcv-app
+    restart: unless-stopped
+    working_dir: /var/www
+    volumes:
+      - voldigitalcv:/var/www/
+
+networks:
+  default:
+    external:
+      name: server_network
+
+volumes:
+  voldigitalcv:
