@@ -22,6 +22,7 @@ class ResumeController extends AppBaseController
 
     public function __construct(ResumeRepository $resumeRepo, TemplateRepository $templateRepo)
     {
+        self::middleware('role:Super', ['except' => ['preview']]);
         $this->resumeRepository = $resumeRepo;
     }
 

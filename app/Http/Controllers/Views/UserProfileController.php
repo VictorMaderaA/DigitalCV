@@ -37,5 +37,4 @@ class UserProfileController extends Controller
         return view('user.resumes.index')
             ->with('templates', $templates);
     }
-
 }

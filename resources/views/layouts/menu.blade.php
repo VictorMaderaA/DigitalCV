@@ -8,7 +8,7 @@
 </li>
 
 <li class="{{ Request::is('my/media*') ? 'active' : '' }}">
-    <a href="{{ route('my.media') }}"><i class="fa fa-edit"></i><span>Mis Archivos</span></a>
+    <a href="{{ route('my.files') }}"><i class="fa fa-edit"></i><span>Mis Archivos</span></a>
 </li>
 
 <li class="{{ Request::is('payment*') ? 'active' : '' }}">
@@ -35,11 +35,13 @@
     <a href="{{ route('resumes.index') }}"><i class="fa fa-edit"></i><span>Resumes</span></a>
 </li>
 
+<li class="{{ Request::is('files*') ? 'active' : '' }}">
+    <a href="{{ route('files.index') }}"><i class="fa fa-edit"></i><span>Files</span></a>
+</li>
+
 @endrole
 
 
 
-<li class="{{ Request::is('files*') ? 'active' : '' }}">
-    <a href="{{ route('files.index') }}"><i class="fa fa-edit"></i><span>Files</span></a>
-</li>
+
 

@@ -22,6 +22,8 @@ class TemplateController extends AppBaseController
 
     public function __construct(TemplateRepository $templateRepo, TemplateViewHistoryRepository $templateViewHistoryRepo)
     {
+        self::middleware('role:Super', ['except' => ['preview']]);
+
         $this->templateRepository = $templateRepo;
         $this->templateViewHistoryRepository = $templateViewHistoryRepo;
     }

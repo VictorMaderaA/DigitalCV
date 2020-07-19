@@ -18,6 +18,7 @@ class FileController extends AppBaseController
 
     public function __construct(FileRepository $fileRepo)
     {
+        self::middleware(['role:Super']);
         $this->fileRepository = $fileRepo;
     }
 

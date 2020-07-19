@@ -17,6 +17,7 @@ class TemplateViewHistoryController extends AppBaseController
 
     public function __construct(TemplateViewHistoryRepository $templateViewHistoryRepo)
     {
+        self::middleware('role:Super');
         $this->templateViewHistoryRepository = $templateViewHistoryRepo;
     }
 

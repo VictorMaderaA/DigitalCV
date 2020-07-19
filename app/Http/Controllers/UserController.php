@@ -18,6 +18,7 @@ class UserController extends AppBaseController
 
     public function __construct(UserRepository $userRepo)
     {
+        self::middleware(['role:Super']);
         $this->userRepository = $userRepo;
     }
 

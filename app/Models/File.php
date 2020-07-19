@@ -80,4 +80,8 @@ class File extends Model
         $media->syncOriginal();
         return $media;
     }
+
+    public function getPublicLink(){
+        return route('profile.file', [$this->getAttributeValue('user_id'), $this->getAttributeValue('id')]);
+    }
 }

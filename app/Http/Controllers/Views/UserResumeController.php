@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Views;
 use App\Http\Controllers\Controller;
 use App\Repositories\ResumeRepository;
 use App\Repositories\TemplateRepository;
-use App\Repositories\TemplateViewHistoryRepository;
 use App\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -55,7 +54,7 @@ class UserResumeController extends Controller
         $user = auth()->user();
         if(count($user->getSubscriptions()) <= 0){
             Flash::error('Seleccion un plan primero');
-            return redirect(route('payment.billingPortal'));
+            return redirect(route('payment.index'));
         }
         $resumesCount = $user->resumes()->count();
         $subsLevel = $user->getSubscriptionLevel();
