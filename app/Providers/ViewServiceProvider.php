@@ -34,6 +34,11 @@ class ViewServiceProvider extends ServiceProvider
             $templateItems = Template::pluck('name','id')->toArray();
             $view->with('templateItems', $templateItems);
         });
+
+        View::composer(['cv-templates.*'], function ($view) {
+            $defaultView = "cv-templates.def".str_replace(".blade", "",pathinfo($view->getPath())['filename']);
+            $view->with('defaultView', $defaultView);
+        });
         //
     }
 }
