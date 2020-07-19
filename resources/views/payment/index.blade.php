@@ -73,6 +73,7 @@
                     <li><span>Guarda tu documento CV</span></li>
                     <li><span>Permite que descarguen tu CV</span></li>
                     <li><span>Comparte tu Perfil con otros</span></li>
+                    <li><span>Utiliza 1 plantilla con tu cuenta</span></li>
 
                 </ul>
                 <hr>
@@ -94,6 +95,7 @@
                     <li><span>Permite que descarguen tu CV</span></li>
                     <li><span>Comparte tu Perfil con otros</span></li>
                     <li><span>Almacena las imagens y videos de tu CV con nosotros</span></li>
+                    <li><span>Utiliza hasta 3 plantilla simultaneas con tu cuenta</span></li>
                 </ul>
                 <hr>
                 <h3>€2 / month</h3>
@@ -115,6 +117,7 @@
                     <li><span>Almacena las imagens y videos de tu CV con nosotros</span></li>
                     <li><span>Formularios de contacto ligados a tu perfil</span></li>
                     <li><span>Almacenamos los mensajes que te lleguen</span></li>
+                    <li><span>Utiliza hasta 5 plantilla simultaneas con tu cuenta</span></li>
                 </ul>
                 <hr>
                 <h3>€3 / month</h3>

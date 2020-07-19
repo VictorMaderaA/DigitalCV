@@ -537,6 +537,7 @@
                     <li><span class="fa-li"><i class="fas fa-check"></i>Guarda tu documento CV</span></li>
                     <li><span class="fa-li"><i class="fas fa-check"></i>Permite que descarguen tu CV</span></li>
                     <li><span class="fa-li"><i class="fas fa-check"></i>Comparte tu Perfil con otros</span></li>
+                    <li><span class="fa-li"><i class="fas fa-check"></i>Utiliza 1 plantilla con tu cuenta</span></li>
                   </ul>
                   <a href="#" class="btn btn-block btn-primary text-uppercase">Obtener</a>
                 </div>
@@ -556,6 +557,8 @@
                     <li><span class="fa-li"><i class="fas fa-check"></i>Permite que descarguen tu CV</span></li>
                     <li><span class="fa-li"><i class="fas fa-check"></i>Comparte tu Perfil con otros</span></li>
                     <li><span class="fa-li"><i class="fas fa-check"></i>Almacena las imagens y videos de tu CV con nosotros</span></li>
+                    <li><span class="fa-li"><i class="fas fa-check"></i>Utiliza hasta 3 plantilla simultaneas con tu cuenta</span></li>
+
                   </ul>
                   <a href="#" class="btn btn-block btn-primary text-uppercase">Obtener</a>
                 </div>
@@ -577,6 +580,8 @@
                     <li><span class="fa-li"><i class="fas fa-check"></i>Almacena las imagens y videos de tu CV con nosotros</span></li>
                     <li><span class="fa-li"><i class="fas fa-check"></i>Formularios de contacto ligados a tu perfil</span></li>
                     <li><span class="fa-li"><i class="fas fa-check"></i>Almacenamos los mensajes que te lleguen</span></li>
+                    <li><span class="fa-li"><i class="fas fa-check"></i>Utiliza hasta 5 plantilla simultaneas con tu cuenta</span></li>
+
                 </ul>
                   <a href="#" class="btn btn-block btn-primary text-uppercase">Obtener</a>
                 </div>

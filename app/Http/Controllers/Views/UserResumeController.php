@@ -174,7 +174,8 @@ class UserResumeController extends Controller
             return redirect(route('templates.index'));
         }
 
-        $contents = view('cv-templates.'.$template->getAttributeValue('folderName'))->render();
+        $contents = view('cv-templates.'.$template->getAttributeValue('folderName'))
+        ->with('content', $resume->getAttributeValue('content'))->render();
         $name = Carbon::now()->dayOfYear();
         Storage::disk('local')->put("/temp/{$name}.html", $contents);
         $response = Storage::download("/temp/{$name}.html", 'template.html');

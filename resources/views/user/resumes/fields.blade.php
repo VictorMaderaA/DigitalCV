@@ -13,7 +13,7 @@
     {!! Form::label('content', 'Content:') !!}
     {!! Form::textarea('content', null, ['class' => 'form-control', 'placeholder' =>
 'Copy Everything thats inside the following div tags
-Copiar contenido dentro que se encuentra dentro de las etiquetas siguientes
+Copiar contenido que se encuentra dentro de las etiquetas siguientes
 
 <div id="copy-me-cv">
     Contenido/Modificaciones
