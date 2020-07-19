@@ -26,15 +26,11 @@ class ViewServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        View::composer(['resumes.fields'], function ($view) {
-            $templateItems = Template::pluck('name','id')->toArray();
-            $view->with('templateItems', $templateItems);
-        });
-        View::composer(['resumes.fields'], function ($view) {
+        View::composer(['files.fields', 'resumes.fields'], function ($view) {
             $userItems = User::pluck('email','id')->toArray();
             $view->with('userItems', $userItems);
         });
-        View::composer(['template_view_histories.fields'], function ($view) {
+        View::composer(['resumes.fields', 'template_view_histories.fields'], function ($view) {
             $templateItems = Template::pluck('name','id')->toArray();
             $view->with('templateItems', $templateItems);
         });

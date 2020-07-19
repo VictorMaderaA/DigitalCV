@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Models\File;
 use App\Models\Resume;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -48,6 +49,11 @@ class User extends Authenticatable
     public function resumes()
     {
         return $this->hasMany(Resume::class, 'user_id', 'id');
+    }
+
+    public function files()
+    {
+        return $this->hasMany(File::class, 'user_id', 'id');
     }
 
 

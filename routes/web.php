@@ -30,7 +30,7 @@ Route::get('my/templates/{idResume}/edit', 'Views\UserResumeController@edit')->n
 Route::put('my/templates/{idResume}', 'Views\UserResumeController@update')->name('my.resumes.update')->middleware(['auth', 'verified']);
 Route::get('my/templates/{idResume}/download', 'Views\UserResumeController@downloadView')->name('my.resumes.download')->middleware(['auth', 'verified']);
 Route::delete('my/templates/{idResume}', 'Views\UserResumeController@delete')->name('my.resumes.destroy')->middleware(['auth', 'verified']);
-Route::get('my/media', 'Views\PaymentController')->name('my.media')->middleware(['auth', 'verified']);
+Route::get('my/files', 'Views\PaymentController')->name('my.files')->middleware(['auth', 'verified']);
 Route::get('my/profile', 'Views\PaymentController')->name('my.profile')->middleware(['auth', 'verified']);
 
 Route::get('profile/{userId}', 'Views\WelcomeController')->middleware(['auth', 'verified']);
@@ -39,3 +39,6 @@ Route::get('profile/{userId}/download', 'Views\WelcomeController')->middleware([
 
 
 
+
+
+Route::resource('files', 'FileController');
