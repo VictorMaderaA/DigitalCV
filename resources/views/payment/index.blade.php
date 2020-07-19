@@ -75,8 +75,9 @@
                 <hr>
                 <h3>€1 / month</h3>
                 <hr>
+                <p class="label" style="color: black">Click en el boton para realizar la compra directamente</p>
                 <p><a class="btn btn-success btn-large" href="{{ route('payment.subscribe', 'lite') }}"><i
-                            class="icon-ok"></i> Select plan</a></p>
+                            class="icon-ok"></i> Comprar Plan</a></p>
             </div>
         </div>
 
@@ -96,12 +97,13 @@
                 <hr>
                 <h3>€2 / month</h3>
                 <hr>
+                <p class="label" style="color: black">Click en el boton para realizar la compra directamente</p>
                 <p><a class="btn btn-success btn-large" href="{{ route('payment.subscribe', 'lite-plus') }}"><i
-                            class="icon-ok"></i> Select plan</a></p>
+                            class="icon-ok"></i> Comprar Plan</a></p>
             </div>
         </div>
 
-        <div class="col-md-3">
+        {{-- <div class="col-md-3">
             <div class="well">
                 <h2 class="text-info">BASIC</h2>
                 <ul>
@@ -118,10 +120,11 @@
                 <hr>
                 <h3>€3 / month</h3>
                 <hr>
+                <p class="label" style="color: black">Click en el boton para realizar la compra directamente</p>
                 <p><a class="btn btn-success btn-large" href="{{ route('payment.subscribe', 'basic') }}"><i
                             class="icon-ok"></i> Select plan</a></p>
             </div>
-        </div>
+        </div> --}}
 
     </div>
     @endif

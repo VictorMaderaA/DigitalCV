@@ -7,8 +7,20 @@
            <a class="btn btn-primary pull-right" style="margin-top: -10px;margin-bottom: 5px" href="{{ route('my.files.create') }}">Agregar Archivo</a>
         </h1>
     </section>
-    <div class="content">
+
         <div class="clearfix"></div>
+
+        <div class="box-body">
+            <div class="row">
+                {!! Form::open(['route' => 'my.files.store', 'enctype' => 'multipart/form-data']) !!}
+
+                    @include('user.files.fields')
+
+                {!! Form::close() !!}
+            </div>
+        </div>
+
+    <div class="content">
 
         @include('flash::message')
 

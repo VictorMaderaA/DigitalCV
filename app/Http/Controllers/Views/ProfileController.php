@@ -16,7 +16,7 @@ class ProfileController extends Controller
      */
     public function index()
     {
-        return view('home');
+        return view('user.profile.index');
     }
 
     public function getFile(Int $userId, Int $fileId){

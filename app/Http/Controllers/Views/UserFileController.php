@@ -38,36 +38,6 @@ class UserFileController extends Controller
             ->with('files', $files);
     }
 
-     /**
-     * Show the form for creating a new File.
-     *
-     * @return Response
-     */
-    public function create()
-    {
-        /** @var User */
-        $user = auth()->user();
-        if(count($user->getSubscriptions()) <= 0){
-            Flash::error('Seleccion un plan primero');
-            return redirect(route('payment.billingPortal'));
-        }
-        $subsLevel = $user->getSubscriptionLevel();
-        switch ($subsLevel) {
-            case 1:
-                Flash::error('Es necesario el plan LitePlus o superior para almacenar archivos');
-                return redirect()->back();
-                break;
-            case 2:
-                break;
-            case 3:
-                break;
-            default:
-                Flash::error('Ocurrio Un Error al Cargar tu Plan');
-                break;
-        }
-        return view('user.files.create');
-    }
-
     /**
      * Store a newly created File in storage.
      *
@@ -81,7 +51,7 @@ class UserFileController extends Controller
         $user = auth()->user();
         if(count($user->getSubscriptions()) <= 0){
             Flash::error('Seleccion un plan primero');
-            return redirect(route('payment.billingPortal'));
+            return redirect(route('payment.index'));
         }
         $subsLevel = $user->getSubscriptionLevel();
         switch ($subsLevel) {
@@ -98,12 +68,16 @@ class UserFileController extends Controller
                 break;
         }
 
+        if(count($request->allFiles()) <= 0){
+            return redirect(route('my.files'));
+        }
+
         File::storeFile($request->file('file'));
         // $file = $this->fileRepository->create($input);
 
         Flash::success('Archivo almacenado.');
 
-        return redirect(route('files.index'));
+        return redirect(route('my.files'));
     }
 
     public function show($fileId){

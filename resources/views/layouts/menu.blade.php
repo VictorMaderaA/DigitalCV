@@ -1,6 +1,6 @@
 
 <li class="{{ Request::is('my/profile*') ? 'active' : '' }}">
-    <a href="{{ route('my.profile') }}"><i class="fa fa-edit"></i><span>Mi Perfil</span></a>
+    <a href="{{ route('my.profile') }}"><i class="fa fa-edit"></i><span>Menu Principal</span></a>
 </li>
 
 <li class="{{ Request::is('my/templates*') ? 'active' : '' }}">

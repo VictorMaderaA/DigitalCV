@@ -32,10 +32,9 @@ Route::delete('my/templates/{idResume}', 'Views\UserResumeController@delete')->n
 
 Route::get('my/files', 'Views\UserFileController@index')->name('my.files')->middleware(['auth', 'verified']);
 Route::get('my/files/{idFile}', 'Views\UserFileController@show')->name('my.files.show')->middleware(['auth', 'verified']);
-Route::get('my/files/create', 'Views\UserFileController@create')->name('my.files.create')->middleware(['auth', 'verified']);
 Route::post('my/files', 'Views\UserFileController@store')->name('my.files.store')->middleware(['auth', 'verified']);
 
-Route::get('my/profile', 'Views\PaymentController')->name('my.profile')->middleware(['auth', 'verified']);
+Route::get('my/profile', 'Views\ProfileController@index')->name('my.profile')->middleware(['auth', 'verified']);
 
 
 Route::get('profile/{userId}', 'Views\ProfileController@index')->middleware(['auth', 'verified']);
