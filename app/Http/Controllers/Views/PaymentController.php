@@ -41,12 +41,12 @@ class PaymentController extends Controller
         switch ($subscriptionId) {
             case 'lite':
                 Flash::success('Plan Lite Seleccionado');
-                $user->newSubscription('lite', 'price_1H5tMDJZGstCZdU3WiCuiKQK')->add();
+                $user->newSubscription('lite', 'price_1H6lr4JZGstCZdU3qafhWLfH')->add();
                 break;
 
             case 'lite-plus':
                 Flash::success('Plan LitePlus Seleccionado');
-                $user->newSubscription('lite', 'price_1H5tRaJZGstCZdU3ZmdC0cY3')->add();
+                $user->newSubscription('lite', 'price_1H6lrBJZGstCZdU3z0Bjp7nC')->add();
                 break;
             case 'basic':
                 Flash::warning('Plan Basic Seleccionado');

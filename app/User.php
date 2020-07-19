@@ -77,10 +77,10 @@ class User extends Authenticatable implements MustVerifyEmail
         }
         //TODO- REPLACE STATIC PRODUCTS
         switch ($subscription[0]->plan->product) {
-            case 'prod_HfDn78h6rNx2zj': //LITE
+            case 'prod_Hg87eA7R9NhSTt': //LITE
                 return 1;
                 break;
-            case 'prod_HfDtBZkL4mR99j': //LITEPLUS
+            case 'prod_Hg87hlAOmAMk7O': //LITEPLUS
                 return 2;
                 break;
             case 'ADSDA': //BASIC
