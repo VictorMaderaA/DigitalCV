@@ -38,10 +38,10 @@ Route::post('my/files', 'Views\UserFileController@store')->name('my.files.store'
 Route::get('my/profile', 'Views\ProfileController@index')->name('my.profile')->middleware(['auth', 'verified']);
 
 
-// Route::get('profile/{userId}', 'Views\ProfileController@index')->middleware(['auth', 'verified']);
+// Route::get('profile/{userId}', 'Views\ProfileController@index');
 Route::get('profile/{userId}/file/{fileId}', 'Views\ProfileController@getFile')->name('profile.file');
-Route::get('profile/{userId}/resume', 'Views\ProfileController@resume')->name('profile.resume')->middleware(['auth', 'verified']);
-// Route::get('profile/{userId}/download', 'Views\ProfileController@index')->middleware(['auth', 'verified']);
+Route::get('profile/{userId}/resume', 'Views\ProfileController@resume')->name('profile.resume');
+// Route::get('profile/{userId}/download', 'Views\ProfileController@index');
 
 
 Route::get('legal/terms', 'Views\LegalController@terms')->name('legal.terms');
