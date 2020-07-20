@@ -161,6 +161,5 @@
 
     @stack('scripts')
 
-    @include('layouts.cookie-body')
 </body>
 </html>

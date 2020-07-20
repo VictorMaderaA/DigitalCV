@@ -401,7 +401,6 @@
     <!-- Template Main JS File -->
     <script src="{{ asset('vendor/mamba/js/main.js') }}"></script>
 
-    @include('layouts.cookie-body')
 </body>
 
 </html>
