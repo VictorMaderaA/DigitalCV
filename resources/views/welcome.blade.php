@@ -154,49 +154,6 @@
 
     <main id="main">
 
-        {{-- <!-- ======= Counts Section ======= -->
-    <section class="counts section-bg">
-      <div class="container">
-
-        <div class="row">
-
-          <div class="col-lg-3 col-md-6 text-center" data-aos="fade-up">
-            <div class="count-box">
-              <i class="icofont-simple-smile" style="color: #20b38e;"></i>
-              <span data-toggle="counter-up">232</span>
-              <p>Happy Clients</p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 text-center" data-aos="fade-up" data-aos-delay="200">
-            <div class="count-box">
-              <i class="icofont-document-folder" style="color: #c042ff;"></i>
-              <span data-toggle="counter-up">521</span>
-              <p>Projects</p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 text-center" data-aos="fade-up" data-aos-delay="400">
-            <div class="count-box">
-              <i class="icofont-live-support" style="color: #46d1ff;"></i>
-              <span data-toggle="counter-up">1,463</span>
-              <p>Hours Of Support</p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 text-center" data-aos="fade-up" data-aos-delay="600">
-            <div class="count-box">
-              <i class="icofont-users-alt-5" style="color: #ffb459;"></i>
-              <span data-toggle="counter-up">15</span>
-              <p>Hard Workers</p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Counts Section --> --}}
-
         <!-- ======= Services Section ======= -->
         <section id="services" class="services">
             <div class="container">
@@ -244,6 +201,36 @@
 
             </div>
         </section><!-- End Services Section -->
+
+        <section id="portfolio" class="portfolio section-bg">
+            <div class="container aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+
+              <div class="section-title">
+                <h2>Plantillas</h2>
+                <p>Facilitamos el proceso de creacion de tu pagina con plantillas que puedes modificar y al publico.<br>
+                Continuaremos agregando y expandiendo la colleccion de plantillas disponibles para que dispongas de una gran variedad</p>
+              </div>
+
+              <div class="row portfolio-container" style="position: relative; height: 877.5px;">
+
+                @foreach (App\Models\Template::all()->where('active', true)->where('id', '<>', 1)->random(9) as $template)
+                <div class="col-lg-4 col-md-6 portfolio-item" style="position: absolute; left: 0px; top: 0px;">
+                    <div class="portfolio-wrap">
+                      <img src="{{ $template->getPreview() }}" class="img-fluid" alt="">
+                      <div class="portfolio-info">
+                        <h4>{{ $template->name }}</h4>
+                        <div class="portfolio-links">
+                          <a href="{{ $template->getPreview() }}" data-gall="portfolioGallery" class="venobox vbox-item" title="App 1"><i class="icofont-eye"></i></a>
+                          <a href="{{ route('templates.preview', [$template->id]) }}" title="More Details"><i class="icofont-external-link"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                @endforeach
+            </div>
+
+            </div>
+          </section>
 
         <section class="pricing py-5" id="pricing-cv">
 
