@@ -33,9 +33,13 @@
         <div class="clearfix"></div>
         <div class="box box-primary">
             <div class="box-body">
-                {{ $templates->links() }}
+                <div class="text-center">
+                    {{ $templates->links() }}
+                </div>
                 @include('user.resumes.templates-table')
-                {{ $templates->links() }}
+                <div class="text-center">
+                    {{ $templates->links() }}
+                </div>
             </div>
         </div>
         <div class="text-center">
