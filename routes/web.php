@@ -43,6 +43,8 @@ Route::get('profile/{userId}/file/{fileId}', 'Views\ProfileController@getFile')-
 Route::get('profile/{userId}/resume', 'Views\ProfileController@resume')->name('profile.resume');
 // Route::get('profile/{userId}/download', 'Views\ProfileController@index');
 
+Route::get('tutorial', 'Views\TutorialController@index')->name('tutorial');
+
 
 Route::get('legal/terms', 'Views\LegalController@terms')->name('legal.terms');
 Route::get('legal/privacy', 'Views\LegalController@privacy')->name('legal.privacy');

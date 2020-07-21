@@ -13,7 +13,7 @@
     <div class="box box-primary">
         <div class="box-body">
 
-            <div class="text-center" style="font-size: 20px">
+            <div class="text-center" style="font-size: 18px">
                 Gracias por utilizar este servicio.<br>
                 Actualmente está utilizando la primera versión de este servicio.<br>
                 En las próximas semanas se realizaran mejoras <strong>con ayuda de las suscripciones</strong> que van
@@ -25,6 +25,15 @@
             </div>
 
             <br>
+            <div class="text-center" style="font-size: 20px">
+                <h3>Como empezar</h3>
+                <p>
+                    Si no sabes como editar tu plantilla, puedes revisar nuestra
+                    <a href="{{route('tutorial')}}">guia basica</a> o puedes mandar tus dudas en <a href="https://www.facebook.com/Digital-CV-113886277069639" target="_blank"
+                    rel="noopener noreferrer">nuestro Facebook</a>
+                </p>
+            </div>
+
             <br>
 
             <div class="text-center" style="font-size: 20px">
