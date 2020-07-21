@@ -3,7 +3,7 @@
         <thead>
             <tr>
                 <th>Name</th>
-                <th>Url publica (utilizala en las plantillas)</th>
+                <th class="text-center">Url publica (utilizala en las plantillas)</th>
                 <th colspan="3">Action</th>
             </tr>
         </thead>
@@ -11,12 +11,20 @@
             @foreach($files as $file)
             <tr>
                 <td>{{ $file->name }}</td>
-                <td>{{ $file->getPublicLink() }}</td>
+                <td class="text-center">
+                    <p id="file-link-{{$file->id}}">{{ $file->getPublicLink() }}</p>
+                    <button type="button" class="btn btn-primary" onclick="copyToClipboard('#file-link-{{$file->id}}')">
+                        Copiar url
+                    </button>
+                </td>
+                <td>
+                    <a href="{{ $file->getPublicLink() }}" target="_blank" rel="noopener noreferrer" class="btn btn-default">
+                        Abrir url
+                    </a>
+                </td>
                 <td>
                     {!! Form::open(['route' => ['files.destroy', $file->id], 'method' => 'delete']) !!}
                     <div class='btn-group'>
-                        <a href="{{ route('my.files.show', [$file->id]) }}" class='btn btn-default btn-xs'><i
-                                class="glyphicon glyphicon-eye-open"></i></a>
                         {!! Form::button('<i class="glyphicon glyphicon-trash"></i>', ['type' => 'submit', 'class' =>
                         'btn btn-danger btn-xs', 'onclick' => "return confirm('Está Seguro?')"]) !!}
                     </div>
@@ -27,3 +35,17 @@
         </tbody>
     </table>
 </div>
+
+@push('scripts')
+<script>
+    function copyToClipboard(element) {
+        var $temp = $("<input>");
+        $("body").append($temp);
+        $temp.val($(element).text()).select();
+        document.execCommand("copy");
+        $temp.remove();
+        alert('La Url fue copiada');
+    }
+
+</script>
+@endpush
