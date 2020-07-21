@@ -64,7 +64,7 @@ class ResumeController extends AppBaseController
 
         $resume = $this->resumeRepository->create($input);
 
-        Flash::success('Resume saved successfully.');
+        Flash::success('Salvado exitosamente.');
 
         return redirect(route('resumes.index'));
     }
@@ -81,7 +81,7 @@ class ResumeController extends AppBaseController
         $resume = $this->resumeRepository->find($id);
 
         if (empty($resume)) {
-            Flash::error('Resume not found');
+            Flash::error('No se encontro');
 
             return redirect(route('resumes.index'));
         }
@@ -101,7 +101,7 @@ class ResumeController extends AppBaseController
         $resume = $this->resumeRepository->find($id);
 
         if (empty($resume)) {
-            Flash::error('Resume not found');
+            Flash::error('No se encontro');
 
             return redirect(route('resumes.index'));
         }
@@ -122,14 +122,14 @@ class ResumeController extends AppBaseController
         $resume = $this->resumeRepository->find($id);
 
         if (empty($resume)) {
-            Flash::error('Resume not found');
+            Flash::error('No se encontro');
 
             return redirect(route('resumes.index'));
         }
 
         $resume = $this->resumeRepository->update($request->all(), $id);
 
-        Flash::success('Resume updated successfully.');
+        Flash::success('Se guardaron los cambios.');
 
         return redirect(route('resumes.index'));
     }
@@ -148,14 +148,14 @@ class ResumeController extends AppBaseController
         $resume = $this->resumeRepository->find($id);
 
         if (empty($resume)) {
-            Flash::error('Resume not found');
+            Flash::error('No se encontro');
 
             return redirect(route('resumes.index'));
         }
 
         $this->resumeRepository->delete($id);
 
-        Flash::success('Resume deleted successfully.');
+        Flash::success('Eliminado correctamente.');
 
         return redirect(route('resumes.index'));
     }
@@ -172,7 +172,7 @@ class ResumeController extends AppBaseController
         $resume = $this->resumeRepository->find($id);
 
         if (empty($resume)) {
-            Flash::error('Resume not found');
+            Flash::error('No se encontro');
 
             return redirect(route('resumes.index'));
         }
@@ -180,7 +180,7 @@ class ResumeController extends AppBaseController
         $template = $resume->template()->first();
 
         if (view()->exists('cv-templates.'.$template->getAttributeValue('folderName')) == false) {
-            Flash::error('Template not found');
+            Flash::error('No se encontro la plantilla');
             return redirect(route('templates.index'));
         }
 

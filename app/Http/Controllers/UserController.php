@@ -59,7 +59,7 @@ class UserController extends AppBaseController
         $input['password'] = Hash::make($input['password']);
         $user = $this->userRepository->create($input);
 
-        Flash::success('User saved successfully.');
+        Flash::success('Usuario guardado.');
 
         return redirect(route('users.index'));
     }
@@ -76,7 +76,7 @@ class UserController extends AppBaseController
         $user = $this->userRepository->find($id);
 
         if (empty($user)) {
-            Flash::error('User not found');
+            Flash::error('Usuario no encontrado');
 
             return redirect(route('users.index'));
         }
@@ -96,7 +96,7 @@ class UserController extends AppBaseController
         $user = $this->userRepository->find($id);
 
         if (empty($user)) {
-            Flash::error('User not found');
+            Flash::error('Usuario no encontrado');
 
             return redirect(route('users.index'));
         }
@@ -117,7 +117,7 @@ class UserController extends AppBaseController
         $user = $this->userRepository->find($id);
 
         if (empty($user)) {
-            Flash::error('User not found');
+            Flash::error('Usuario no encontrado');
 
             return redirect(route('users.index'));
         }
@@ -129,7 +129,7 @@ class UserController extends AppBaseController
         }
         $user = $this->userRepository->update($input, $id);
 
-        Flash::success('User updated successfully.');
+        Flash::success('Usuario actualizado.');
 
         return redirect(route('users.index'));
     }
@@ -148,14 +148,14 @@ class UserController extends AppBaseController
         $user = $this->userRepository->find($id);
 
         if (empty($user)) {
-            Flash::error('User not found');
+            Flash::error('Usuario no encontrado');
 
             return redirect(route('users.index'));
         }
 
         $this->userRepository->delete($id);
 
-        Flash::success('User deleted successfully.');
+        Flash::success('Usuario eliminado.');
 
         return redirect(route('users.index'));
     }

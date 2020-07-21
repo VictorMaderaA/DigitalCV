@@ -61,7 +61,7 @@ class FileController extends AppBaseController
         File::storeFile($request->file('file'));
         // $file = $this->fileRepository->create($input);
 
-        Flash::success('File saved successfully.');
+        Flash::success('Archivo guardado.');
 
         return redirect(route('files.index'));
     }
@@ -78,7 +78,7 @@ class FileController extends AppBaseController
         $file = $this->fileRepository->find($id);
 
         if (empty($file)) {
-            Flash::error('File not found');
+            Flash::error('Archivo no encontrado');
 
             return redirect(route('files.index'));
         }
@@ -98,7 +98,7 @@ class FileController extends AppBaseController
         $file = $this->fileRepository->find($id);
 
         if (empty($file)) {
-            Flash::error('File not found');
+            Flash::error('Archivo no encontrado');
 
             return redirect(route('files.index'));
         }
@@ -119,14 +119,14 @@ class FileController extends AppBaseController
         $file = $this->fileRepository->find($id);
 
         if (empty($file)) {
-            Flash::error('File not found');
+            Flash::error('Archivo no encontrado');
 
             return redirect(route('files.index'));
         }
 
         $file = $this->fileRepository->update($request->all(), $id);
 
-        Flash::success('File updated successfully.');
+        Flash::success('Archivo actualizado.');
 
         return redirect(route('files.index'));
     }
@@ -145,14 +145,14 @@ class FileController extends AppBaseController
         $file = $this->fileRepository->find($id);
 
         if (empty($file)) {
-            Flash::error('File not found');
+            Flash::error('Archivo no encontrado');
 
             return redirect(route('files.index'));
         }
 
         $this->fileRepository->delete($id);
 
-        Flash::success('File deleted successfully.');
+        Flash::success('Archivo eliminado.');
 
         return redirect(route('files.index'));
     }

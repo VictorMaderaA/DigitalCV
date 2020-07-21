@@ -66,7 +66,7 @@ class TemplateController extends AppBaseController
 
         $template = $this->templateRepository->create($input);
 
-        Flash::success('Template saved successfully.');
+        Flash::success('Plantilla guardada.');
 
         return redirect(route('templates.index'));
     }
@@ -83,7 +83,7 @@ class TemplateController extends AppBaseController
         $template = $this->templateRepository->find($id);
 
         if (empty($template)) {
-            Flash::error('Template not found');
+            Flash::error('No se encontro la plantilla');
 
             return redirect(route('templates.index'));
         }
@@ -103,7 +103,7 @@ class TemplateController extends AppBaseController
         $template = $this->templateRepository->find($id);
 
         if (empty($template)) {
-            Flash::error('Template not found');
+            Flash::error('No se encontro la plantilla');
 
             return redirect(route('templates.index'));
         }
@@ -124,7 +124,7 @@ class TemplateController extends AppBaseController
         $template = $this->templateRepository->find($id);
 
         if (empty($template)) {
-            Flash::error('Template not found');
+            Flash::error('No se encontro la plantilla');
 
             return redirect(route('templates.index'));
         }
@@ -136,7 +136,7 @@ class TemplateController extends AppBaseController
             $template->setPreviewFile($file);
         }
 
-        Flash::success('Template updated successfully.');
+        Flash::success('Plantilla actualizada.');
 
         return redirect(route('templates.index'));
     }
@@ -155,14 +155,14 @@ class TemplateController extends AppBaseController
         $template = $this->templateRepository->find($id);
 
         if (empty($template)) {
-            Flash::error('Template not found');
+            Flash::error('No se encontro la plantilla');
 
             return redirect(route('templates.index'));
         }
 
         $this->templateRepository->delete($id);
 
-        Flash::success('Template deleted successfully.');
+        Flash::success('Plantilla borrada.');
 
         return redirect(route('templates.index'));
     }
@@ -178,7 +178,7 @@ class TemplateController extends AppBaseController
         $template = $this->templateRepository->find($id);
 
         if (empty($template) || view()->exists('cv-templates.'.$template->getAttributeValue('folderName')) == false) {
-            Flash::error('Template not found');
+            Flash::error('No se encontro la plantilla');
             return redirect(route('templates.index'));
         }
 

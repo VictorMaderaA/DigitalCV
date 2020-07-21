@@ -134,7 +134,7 @@ class UserResumeController extends Controller
             'main' => $request->input('main'),
         ], $resumeId);
 
-        Flash::success('Resume updated successfully.');
+        Flash::success('Se guardaron los cambios.');
         return redirect(route('my.resumes'));
     }
 
@@ -169,7 +169,7 @@ class UserResumeController extends Controller
         $template = $resume->template()->first();
 
         if (view()->exists('cv-templates.'.$template->getAttributeValue('folderName')) == false) {
-            Flash::error('Template not found');
+            Flash::error('No se encontro la plantilla');
             return redirect(route('templates.index'));
         }
 
