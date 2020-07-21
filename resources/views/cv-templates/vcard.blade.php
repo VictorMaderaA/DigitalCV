@@ -1,3 +1,8 @@
+@if (isset($content))
+    {!! $content !!}
+@else
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,10 +17,10 @@
     <title>Vcard - Resume CV &amp; Vcard Template</title>
 
     <!-- Favicon -->
-    <link rel="icon" href="img/core-img/favicon.ico">
+    <link rel="icon" href="{{asset('/cv-templates/vcard/img/core-img/favicon.ico')}}">
 
     <!-- Core Stylesheet -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{asset('/cv-templates/vcard/style.css')}}">
 
 </head>
 
@@ -34,7 +39,7 @@
                     <!-- Menu -->
                     <nav class="classy-navbar justify-content-between" id="vcardNav">
 
-                        <a href="index-onepage.html" class="nav-brand"><img src="img/core-img/logo.png" alt=""></a>
+                        <a href="index-onepage.html" class="nav-brand"><img src="{{asset('/cv-templates/vcard/img/core-img/logo.png')}}" alt=""></a>
 
                         <!-- Navbar Toggler -->
                         <div class="classy-navbar-toggler">
@@ -74,7 +79,7 @@
     <!-- ##### Header Area End ##### -->
 
     <!-- ##### Hero Area Start ##### -->
-    <div class="hero-area bg-img clearfix" style="background-image: url(img/bg-img/bg1.jpg);" id="about">
+    <div class="hero-area bg-img clearfix" style="background-image: url({{asset('/cv-templates/vcard/img/bg-img/bg1.jpg')}});" id="about">
         <div class="container h-100">
             <div class="row h-100 align-items-center">
                 <div class="col-12 col-sm-10 col-md-8">
@@ -85,9 +90,9 @@
                         <h3 class="wow fadeInUp" data-wow-delay="500ms">Digital Designer &amp; Illustrator</h3>
                         <!-- Contact Info -->
                         <div class="contact-info mt-30 wow fadeInUp" data-wow-delay="700ms">
-                            <a href="#"><img src="img/core-img/envelope-small.png" alt=""> contactme@templatename.com</a>
-                            <a href="#"><img src="img/core-img/phone-call-small.png" alt=""> +76 6524 567862 763</a>
-                            <a href="#"><img src="img/core-img/monitor-small.png" alt=""> www.mytemplatename.com</a>
+                            <a href="#"><img src="{{asset('/cv-templates/vcard/img/core-img/envelope-small.png')}}" alt=""> contactme@templatename.com</a>
+                            <a href="#"><img src="{{asset('/cv-templates/vcard/img/core-img/phone-call-small.png')}}" alt=""> +76 6524 567862 763</a>
+                            <a href="#"><img src="{{asset('/cv-templates/vcard/img/core-img/monitor-small.png')}}" alt=""> www.mytemplatename.com</a>
                         </div>
                         <!-- Social Info -->
                         <div class="social-info mt-30 wow fadeInUp" data-wow-delay="900ms">
@@ -204,7 +209,7 @@
                     <div class="single-service-area mb-100 wow fadeInUp" data-wow-delay="100ms">
                         <div class="service-title d-flex align-items-end">
                             <div class="icon">
-                                <img src="img/core-img/1.png" alt="">
+                                <img src="{{asset('/cv-templates/vcard/img/core-img/1.png')}}" alt="">
                             </div>
                             <h4>Digital Design</h4>
                         </div>
@@ -217,7 +222,7 @@
                     <div class="single-service-area mb-100 wow fadeInUp" data-wow-delay="300ms">
                         <div class="service-title d-flex align-items-end">
                             <div class="icon">
-                                <img src="img/core-img/2.png" alt="">
+                                <img src="{{asset('/cv-templates/vcard/img/core-img/2.png')}}" alt="">
                             </div>
                             <h4>Illustrations</h4>
                         </div>
@@ -230,7 +235,7 @@
                     <div class="single-service-area mb-100 wow fadeInUp" data-wow-delay="500ms">
                         <div class="service-title d-flex align-items-end">
                             <div class="icon">
-                                <img src="img/core-img/3.png" alt="">
+                                <img src="{{asset('/cv-templates/vcard/img/core-img/3.png')}}" alt="">
                             </div>
                             <h4>Web Design</h4>
                         </div>
@@ -243,7 +248,7 @@
                     <div class="single-service-area mb-100 wow fadeInUp" data-wow-delay="700ms">
                         <div class="service-title d-flex align-items-end">
                             <div class="icon">
-                                <img src="img/core-img/4.png" alt="">
+                                <img src="{{asset('/cv-templates/vcard/img/core-img/4.png')}}" alt="">
                             </div>
                             <h4>Logo Design</h4>
                         </div>
@@ -256,7 +261,7 @@
                     <div class="single-service-area mb-100 wow fadeInUp" data-wow-delay="900ms">
                         <div class="service-title d-flex align-items-end">
                             <div class="icon">
-                                <img src="img/core-img/5.png" alt="">
+                                <img src="{{asset('/cv-templates/vcard/img/core-img/5.png')}}" alt="">
                             </div>
                             <h4>Brand Identity</h4>
                         </div>
@@ -269,7 +274,7 @@
                     <div class="single-service-area mb-100 wow fadeInUp" data-wow-delay="1100ms">
                         <div class="service-title d-flex align-items-end">
                             <div class="icon">
-                                <img src="img/core-img/6.png" alt="">
+                                <img src="{{asset('/cv-templates/vcard/img/core-img/6.png')}}" alt="">
                             </div>
                             <h4>Motion Graphics</h4>
                         </div>
@@ -312,126 +317,126 @@
 
                 <!-- Single gallery Item -->
                 <div class="col-12 col-sm-6 col-lg-3 single-portfolio-area web brand wow fadeInUp" data-wow-delay="100ms">
-                    <img src="img/bg-img/p1.jpg" alt="">
+                    <img src="{{asset('/cv-templates/vcard/img/bg-img/p1.jpg')}}" alt="">
                     <!-- Content -->
                     <div class="portfolio-content">
                         <h5>Brand identity - Company</h5>
                         <a href="#" class="catagory">Branding</a>
                         <!-- Zoom View -->
                         <div class="vcard-img-zoom">
-                            <a href="img/bg-img/p1.jpg" class="img-url"><i class="fa fa-search-plus" aria-hidden="true"></i></a>
+                            <a href="{{asset('/cv-templates/vcard/img/bg-img/p1.jpg')}}" class="img-url"><i class="fa fa-search-plus" aria-hidden="true"></i></a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Single gallery Item -->
                 <div class="col-12 col-sm-6 col-lg-3 single-portfolio-area brand illustrations wow fadeInUp" data-wow-delay="200ms">
-                    <img src="img/bg-img/p2.jpg" alt="">
+                    <img src="{{asset('/cv-templates/vcard/img/bg-img/p2.jpg')}}" alt="">
                     <!-- Content -->
                     <div class="portfolio-content">
                         <h5>Device Mockup</h5>
                         <a href="#" class="catagory">Digital Design</a>
                         <!-- Zoom View -->
                         <div class="vcard-img-zoom">
-                            <a href="img/bg-img/p2.jpg" class="img-url"><i class="fa fa-search-plus" aria-hidden="true"></i></a>
+                            <a href="{{asset('/cv-templates/vcard/img/bg-img/p2.jpg')}}" class="img-url"><i class="fa fa-search-plus" aria-hidden="true"></i></a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Single gallery Item -->
                 <div class="col-12 col-sm-6 col-lg-3 single-portfolio-area web illustrations wow fadeInUp" data-wow-delay="300ms">
-                    <img src="img/bg-img/p3.jpg" alt="">
+                    <img src="{{asset('/cv-templates/vcard/img/bg-img/p3.jpg')}}" alt="">
                     <!-- Content -->
                     <div class="portfolio-content">
                         <h5>Brand identity - Company</h5>
                         <a href="#" class="catagory">Digital Design</a>
                         <!-- Zoom View -->
                         <div class="vcard-img-zoom">
-                            <a href="img/bg-img/p3.jpg" class="img-url"><i class="fa fa-search-plus" aria-hidden="true"></i></a>
+                            <a href="{{asset('/cv-templates/vcard/img/bg-img/p3.jpg')}}" class="img-url"><i class="fa fa-search-plus" aria-hidden="true"></i></a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Single gallery Item -->
                 <div class="col-12 col-sm-6 col-lg-3 single-portfolio-area brand motion wow fadeInUp" data-wow-delay="400ms">
-                    <img src="img/bg-img/p4.jpg" alt="">
+                    <img src="{{asset('/cv-templates/vcard/img/bg-img/p4.jpg')}}" alt="">
                     <!-- Content -->
                     <div class="portfolio-content">
                         <h5>Device Mockup</h5>
                         <a href="#" class="catagory">Digital Design</a>
                         <!-- Zoom View -->
                         <div class="vcard-img-zoom">
-                            <a href="img/bg-img/p4.jpg" class="img-url"><i class="fa fa-search-plus" aria-hidden="true"></i></a>
+                            <a href="{{asset('/cv-templates/vcard/img/bg-img/p4.jpg')}}" class="img-url"><i class="fa fa-search-plus" aria-hidden="true"></i></a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Single gallery Item -->
                 <div class="col-12 col-sm-6 col-lg-3 single-portfolio-area brand motion wow fadeInUp" data-wow-delay="500ms">
-                    <img src="img/bg-img/p6.jpg" alt="">
+                    <img src="{{asset('/cv-templates/vcard/img/bg-img/p6.jpg')}}" alt="">
                     <!-- Content -->
                     <div class="portfolio-content">
                         <h5>Brand identity - Company</h5>
                         <a href="#" class="catagory">Digital Design</a>
                         <!-- Zoom View -->
                         <div class="vcard-img-zoom">
-                            <a href="img/bg-img/p6.jpg" class="img-url"><i class="fa fa-search-plus" aria-hidden="true"></i></a>
+                            <a href="{{asset('/cv-templates/vcard/img/bg-img/p6.jpg')}}" class="img-url"><i class="fa fa-search-plus" aria-hidden="true"></i></a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Single gallery Item -->
                 <div class="col-12 col-sm-6 col-lg-3 single-portfolio-area web motion wow fadeInUp" data-wow-delay="600ms">
-                    <img src="img/bg-img/p8.jpg" alt="">
+                    <img src="{{asset('/cv-templates/vcard/img/bg-img/p8.jpg')}}" alt="">
                     <!-- Content -->
                     <div class="portfolio-content">
                         <h5>Device Mockup</h5>
                         <a href="#" class="catagory">Digital Design</a>
                         <!-- Zoom View -->
                         <div class="vcard-img-zoom">
-                            <a href="img/bg-img/p8.jpg" class="img-url"><i class="fa fa-search-plus" aria-hidden="true"></i></a>
+                            <a href="{{asset('/cv-templates/vcard/img/bg-img/p8.jpg')}}" class="img-url"><i class="fa fa-search-plus" aria-hidden="true"></i></a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Single gallery Item -->
                 <div class="col-12 col-sm-6 col-lg-3 single-portfolio-area illustrations motion wow fadeInUp" data-wow-delay="700ms">
-                    <img src="img/bg-img/p5.jpg" alt="">
+                    <img src="{{asset('/cv-templates/vcard/img/bg-img/p5.jpg')}}" alt="">
                     <!-- Content -->
                     <div class="portfolio-content">
                         <h5>Brand identity - Company</h5>
                         <a href="#" class="catagory">Digital Design</a>
                         <!-- Zoom View -->
                         <div class="vcard-img-zoom">
-                            <a href="img/bg-img/p5.jpg" class="img-url"><i class="fa fa-search-plus" aria-hidden="true"></i></a>
+                            <a href="{{asset('/cv-templates/vcard/img/bg-img/p5.jpg')}}" class="img-url"><i class="fa fa-search-plus" aria-hidden="true"></i></a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Single gallery Item -->
                 <div class="col-12 col-sm-6 col-lg-3 single-portfolio-area illustrations motion wow fadeInUp" data-wow-delay="800ms">
-                    <img src="img/bg-img/p7.jpg" alt="">
+                    <img src="{{asset('/cv-templates/vcard/img/bg-img/p7.jpg')}}" alt="">
                     <!-- Content -->
                     <div class="portfolio-content">
                         <h5>Device Mockup</h5>
                         <a href="#" class="catagory">Digital Design</a>
                         <!-- Zoom View -->
                         <div class="vcard-img-zoom">
-                            <a href="img/bg-img/p7.jpg" class="img-url"><i class="fa fa-search-plus" aria-hidden="true"></i></a>
+                            <a href="{{asset('/cv-templates/vcard/img/bg-img/p7.jpg')}}" class="img-url"><i class="fa fa-search-plus" aria-hidden="true"></i></a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Single gallery Item -->
                 <div class="col-12 col-sm-6 col-lg-3 single-portfolio-area web motion wow fadeInUp" data-wow-delay="900ms">
-                    <img src="img/bg-img/p9.jpg" alt="">
+                    <img src="{{asset('/cv-templates/vcard/img/bg-img/p9.jpg')}}" alt="">
                     <!-- Content -->
                     <div class="portfolio-content">
                         <h5>Device Mockup</h5>
                         <a href="#" class="catagory">Digital Design</a>
                         <!-- Zoom View -->
                         <div class="vcard-img-zoom">
-                            <a href="img/bg-img/p9.jpg" class="img-url"><i class="fa fa-search-plus" aria-hidden="true"></i></a>
+                            <a href="{{asset('/cv-templates/vcard/img/bg-img/p9.jpg')}}" class="img-url"><i class="fa fa-search-plus" aria-hidden="true"></i></a>
                         </div>
                     </div>
                 </div>
@@ -458,7 +463,7 @@
                     <!-- Single Cool Fact Area -->
                     <div class="single-cool-fact mb-100 d-flex align-items-center">
                         <div class="cf-icon">
-                            <img src="img/core-img/chat.png" alt="">
+                            <img src="{{asset('/cv-templates/vcard/img/core-img/chat.png')}}" alt="">
                         </div>
                         <div class="cf-text">
                             <h3><span class="counter">246</span></h3>
@@ -469,7 +474,7 @@
                     <!-- Single Cool Fact Area -->
                     <div class="single-cool-fact mb-100 d-flex align-items-center">
                         <div class="cf-icon">
-                            <img src="img/core-img/settings.png" alt="">
+                            <img src="{{asset('/cv-templates/vcard/img/core-img/settings.png')}}" alt="">
                         </div>
                         <div class="cf-text">
                             <h3><span class="counter">178</span></h3>
@@ -480,7 +485,7 @@
                     <!-- Single Cool Fact Area -->
                     <div class="single-cool-fact mb-100 d-flex align-items-center">
                         <div class="cf-icon">
-                            <img src="img/core-img/like.png" alt="">
+                            <img src="{{asset('/cv-templates/vcard/img/core-img/like.png')}}" alt="">
                         </div>
                         <div class="cf-text">
                             <h3><span class="counter">25</span>K</h3>
@@ -491,7 +496,7 @@
                     <!-- Single Cool Fact Area -->
                     <div class="single-cool-fact mb-100 d-flex align-items-center">
                         <div class="cf-icon">
-                            <img src="img/core-img/star.png" alt="">
+                            <img src="{{asset('/cv-templates/vcard/img/core-img/star.png')}}" alt="">
                         </div>
                         <div class="cf-text">
                             <h3><span class="counter">16</span></h3>
@@ -502,7 +507,7 @@
                     <!-- Single Cool Fact Area -->
                     <div class="single-cool-fact mb-100 d-flex align-items-center">
                         <div class="cf-icon">
-                            <img src="img/core-img/photo-camera.png" alt="">
+                            <img src="{{asset('/cv-templates/vcard/img/core-img/photo-camera.png')}}" alt="">
                         </div>
                         <div class="cf-text">
                             <h3><span class="counter">3412</span></h3>
@@ -539,7 +544,7 @@
                             <h5>I really love it</h5>
                             <p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit amet tellus blandit. Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mat tis effic iturut magna.</p>
                             <div class="testimonial-author-info mt-50">
-                                <img src="img/bg-img/tes.jpg" alt="">
+                                <img src="{{asset('/cv-templates/vcard/img/bg-img/tes.jpg')}}" alt="">
                                 <h6>Daiane Smith, <span>Customer</span></h6>
                             </div>
                         </div>
@@ -549,7 +554,7 @@
                             <h5>5* Design &amp; Functionality</h5>
                             <p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit amet tellus blandit. Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mat tis effic iturut magna.</p>
                             <div class="testimonial-author-info mt-50">
-                                <img src="img/bg-img/tes.jpg" alt="">
+                                <img src="{{asset('/cv-templates/vcard/img/bg-img/tes.jpg')}}" alt="">
                                 <h6>Daiane Smith, <span>Client</span></h6>
                             </div>
                         </div>
@@ -559,7 +564,7 @@
                             <h5>The best pack out there</h5>
                             <p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit amet tellus blandit. Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mat tis effic iturut magna.</p>
                             <div class="testimonial-author-info mt-50">
-                                <img src="img/bg-img/tes.jpg" alt="">
+                                <img src="{{asset('/cv-templates/vcard/img/bg-img/tes.jpg')}}" alt="">
                                 <h6>Daiane Smith, <span>Customer</span></h6>
                             </div>
                         </div>
@@ -569,7 +574,7 @@
                             <h5>5* Design &amp; Functionality</h5>
                             <p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit amet tellus blandit. Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mat tis effic iturut magna.</p>
                             <div class="testimonial-author-info mt-50">
-                                <img src="img/bg-img/tes.jpg" alt="">
+                                <img src="{{asset('/cv-templates/vcard/img/bg-img/tes.jpg')}}" alt="">
                                 <h6>Daiane Smith, <span>Customer</span></h6>
                             </div>
                         </div>
@@ -638,7 +643,7 @@
                     <!-- Single Contact Information -->
                     <div class="single-contact-info d-flex align-items-center">
                         <div class="contact-icon">
-                            <img src="img/core-img/placeholder.png" alt="">
+                            <img src="{{asset('/cv-templates/vcard/img/core-img/placeholder.png')}}" alt="">
                         </div>
                         <div class="contact-text">
                             <h6>Address:</h6>
@@ -649,7 +654,7 @@
                     <!-- Single Contact Information -->
                     <div class="single-contact-info d-flex align-items-center">
                         <div class="contact-icon">
-                            <img src="img/core-img/phone-call.png" alt="">
+                            <img src="{{asset('/cv-templates/vcard/img/core-img/phone-call.png')}}" alt="">
                         </div>
                         <div class="contact-text">
                             <h6>Phone:</h6>
@@ -660,7 +665,7 @@
                     <!-- Single Contact Information -->
                     <div class="single-contact-info d-flex align-items-center">
                         <div class="contact-icon">
-                            <img src="img/core-img/envelope.png" alt="">
+                            <img src="{{asset('/cv-templates/vcard/img/core-img/envelope.png')}}" alt="">
                         </div>
                         <div class="contact-text">
                             <h6>Email:</h6>
@@ -690,19 +695,22 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 
     <!-- ##### All Javascript Files ##### -->
     <!-- jQuery-2.2.4 js -->
-    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <script src="{{asset('/cv-templates/vcard/js/jquery/jquery-2.2.4.min.js')}}"></script>
     <!-- Popper js -->
-    <script src="js/bootstrap/popper.min.js"></script>
+    <script src="{{asset('/cv-templates/vcard/js/bootstrap/popper.min.js')}}"></script>
     <!-- Bootstrap js -->
-    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <script src="{{asset('/cv-templates/vcard/js/bootstrap/bootstrap.min.js')}}"></script>
     <!-- All Plugins js -->
-    <script src="js/plugins/plugins.js"></script>
+    <script src="{{asset('/cv-templates/vcard/js/plugins/plugins.js')}}"></script>
     <!-- Active js -->
-    <script src="js/active.js"></script>
+    <script src="{{asset('/cv-templates/vcard/js/active.js')}}"></script>
     <!-- Google Maps -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAwuyLRa1uKNtbgx6xAJVmWy-zADgegA2s"></script>
-    <script src="js/google-map/map-active.js"></script>
+    {{-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAwuyLRa1uKNtbgx6xAJVmWy-zADgegA2s"></script> --}}
+    <script src="{{asset('/cv-templates/vcard/js/google-map/map-active.js')}}"></script>
 
 </body>
 
 </html>
+
+
+@endif
