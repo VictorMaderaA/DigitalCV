@@ -70,5 +70,5 @@ RUN chown -R $user:www-data . && usermod -a -G www-data $user && find . -type f 
 RUN chgrp -R www-data storage bootstrap/cache && chmod -R ug+rwx storage bootstrap/cache
 
 # RUN php artisan key:generate
-RUN php artisan optimize && php artisan config:clear && php artisan config:cache
+RUN php artisan config:clear && php artisan cache:clear && php artisan view:clear && php artisan route:clear
 
