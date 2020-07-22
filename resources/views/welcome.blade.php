@@ -193,7 +193,7 @@
                     </div>
                     <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
                         <div class="icon"><i class="icofont-tasks-alt"></i></div>
-                        <h4 class="title"><a href="">Formularios de contacto</a></h4>
+                        <h4 class="title"><a href="">Formularios de contacto wip</a></h4>
                         <p class="description">Agrega un formulario a tu cv y deja que te contacten. Nosotros
                             almacenamos los mensajes para que los veas cuando quieras.</p>
                     </div>
@@ -207,7 +207,7 @@
 
               <div class="section-title">
                 <h2>Plantillas</h2>
-                <p>Facilitamos el proceso de creacion de tu pagina con plantillas que puedes modificar y al publico.<br>
+                <p>Facilitamos el proceso de creacion de tu pagina con plantillas que puedes modificar.<br>
                 Continuaremos agregando y expandiendo la colleccion de plantillas disponibles para que dispongas de una gran variedad</p>
               </div>
 
