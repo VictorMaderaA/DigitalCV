@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Views;
 use App\Http\Controllers\Controller;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Env;
 use Illuminate\Support\Facades\Log;
 use Laracasts\Flash\Flash;
 use Stripe\Customer;
@@ -41,12 +42,12 @@ class PaymentController extends Controller
         switch ($subscriptionId) {
             case 'lite':
                 Flash::success('Plan Lite Seleccionado');
-                $user->newSubscription('lite', 'price_1H6lr4JZGstCZdU3qafhWLfH')->add();
+                $user->newSubscription('lite', Env::get('PRICE_LITE'))->add();
                 break;
 
             case 'lite-plus':
                 Flash::success('Plan LitePlus Seleccionado');
-                $user->newSubscription('lite', 'price_1H6lrBJZGstCZdU3z0Bjp7nC')->add();
+                $user->newSubscription('lite', Env::get('PRICE_LITEPLUS'))->add();
                 break;
             case 'basic':
                 Flash::warning('Plan Basic Seleccionado');

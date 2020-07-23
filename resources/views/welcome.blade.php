@@ -31,7 +31,8 @@
     <!-- Template Main CSS File -->
     <link href="{{ asset('vendor/mamba/css/style.css') }}" rel="stylesheet">
 
-    @include('layouts.cookie-head')
+    @include('layouts.snippets.cookie-head')
+    @include('layouts.snippets.analytics')
 
     <!-- =======================================================
   * Template Name: Mamba - v2.3.0

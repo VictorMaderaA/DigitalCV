@@ -7,6 +7,7 @@ use App\Models\Resume;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Env;
 use Laravel\Cashier\Billable;
 use Spatie\Permission\Traits\HasRoles;
 use Stripe\Customer;
@@ -77,13 +78,13 @@ class User extends Authenticatable implements MustVerifyEmail
         }
         //TODO- REPLACE STATIC PRODUCTS
         switch ($subscription[0]->plan->product) {
-            case 'prod_Hg87eA7R9NhSTt': //LITE
+            case Env::get('PROD_LITE'): //LITE
                 return 1;
                 break;
-            case 'prod_Hg87hlAOmAMk7O': //LITEPLUS
+            case Env::get('PROD_LITEPLUS'): //LITEPLUS
                 return 2;
                 break;
-            case 'ADSDA': //BASIC
+            case Env::get('PROD_BASIC'): //BASIC
                 return 3;
                 break;
 
